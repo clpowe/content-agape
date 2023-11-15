@@ -1,5 +1,5 @@
 <template>
-  <main>
-    <ContentDoc />
-  </main>
+	<main class="content-grid">
+		<ContentDoc />
+	</main>
 </template>

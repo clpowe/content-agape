@@ -1,9 +1,11 @@
-# Nuxt Content
+# We help [you]{.text-red} pass the bar
 
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
+Personalized service with proven results
 
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
+## Our [service]{.text-red}
 
----
+Agape Christian Bar Prep offers many services to help students prepare for success in law school and on the bar exam.  Our services are customized to clearly identify and meet the individual needs of law students and law school graduates.
 
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+## How our Program is [diffrent]{.text-red}
+
+Agape Christian Bar Prep helps students prepare to pass the bar exam through personalized services that offer a holistic approach to bar exam preparation. Our program is uniquely designed to meet the individual spiritual, mental, emotional and academic needs of students while simultaneously empowering them to conquer the bar exam and achieve their dreams of becoming attorneys.
