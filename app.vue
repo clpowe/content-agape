@@ -1,4 +1,5 @@
 <template>
+	<Header />
 	<NuxtLayout class="layouts">
 		<NuxtPage />
 	</NuxtLayout>
@@ -71,6 +72,10 @@
 		--clr-accent-300: hsl(358, 72%, 65%);
 		--clr-accent-400: hsl(358, 72%, 50%);
 		--clr-accent-500: hsl(358, 72%, 35%);
+
+		--clr-black-200: hsl(0, 0%, 80%);
+		--clr-black-400: hsl(0, 0%, 40%);
+		--clr-black-500: hsl(0, 0%, 7%);
 	}
 
 	h1,
@@ -117,6 +122,10 @@
 		text-transform: uppercase;
 	}
 
+	p {
+		margin-bottom: 1em;
+	}
+
 	.text-red {
 		color: var(--clr-secondary-400);
 	}
@@ -127,5 +136,24 @@
 
 	.margin-none {
 		margin: 0;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: middle;
+		font-size: italic;
+		background-repeat: no-repeat;
+		background-size: cover;
+		shape-margin: 0.75rem;
+	}
+
+	.flow > * + * {
+		margin-top: var(--flow-spacing, 1em);
+	}
+
+	.teacher {
+		max-width: 500px;
+		width: 100%;
 	}
 </style>

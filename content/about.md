@@ -1,4 +1,6 @@
-# About Us
+---
+title: 'About Us'
+---
 
 ## About Agape [Christian]{.text-red} Bar Prep
 

@@ -1,5 +1,5 @@
 <template>
-	<main class="content-grid">
-		<ContentDoc />
+	<main>
+		<ContentDoc class="flow content-grid" />
 	</main>
 </template>
