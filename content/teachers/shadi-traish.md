@@ -12,23 +12,15 @@ Teacher
 
 ![my image](https://ik.imagekit.io/cpds/Agape_Christian/Shadi_main_PGiKBXlNh.jpeg?updatedAt=1688268628751)
 
-### Education
+::InfoList{:title="Education" :list='["Stetson University College of Law, J.D., 2016","University of Cincinnati, M.S.W. 2009","University of Akron, B.A. 2004"]'}
+::
 
-- Stetson University College of Law, J.D., 2016
-- University of Cincinnati, M.S.W. 2009
-- University of Akron, B.A. 2004
+::InfoList{:title="Bar Admissions" :list='["Florida 2016]'}
+::
 
-### Bar Admissions
+::InfoList{:title="Expertise" :list='["Commercial Paper","Contracts","Property","Secured Transactions","Wills & Trusts"]'}
+::
 
-- Florida 2016
-
-### Expertise
-
-- Commercial Paper
-- Contracts
-- Property
-- Secured Transactions
-- Wills & Trusts
 
 ## Teacher [Biography]{.text-red}
 
