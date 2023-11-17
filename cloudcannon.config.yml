@@ -1,7 +1,7 @@
 paths:
   uploads: uploads
   static: ''
-  collections: ''
+  collections: 'teachers'
   data: ''
   layouts:
 collections_config:
