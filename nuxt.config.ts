@@ -8,6 +8,9 @@ export default defineNuxtConfig({
 			}
 		}
 	},
+	content: {
+		documentDriven: true
+	},
 	devtools: { enabled: true },
 	modules: ['@nuxt/image', '@nuxt/content'],
 	image: {
