@@ -2,7 +2,7 @@ paths:
   uploads: uploads
 collections_config:
   teachers:
-    path: content/teachers
+    path: content/teachers/
     output: false
     url:
     filter:
@@ -29,7 +29,7 @@ collections_config:
     schemas: {}
     schema_key:
   services:
-    path: content/services
+    path: content/services/
     output: false
     url:
     filter:
