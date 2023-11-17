@@ -1,36 +1,32 @@
 ---
-description: 'Ms. Damey is dedicated and passionate about helping others, particularly, individuals with diverse educational, socio-economic, and cultural backgrounds. As a child of immigrant parents, Ms. Damey understands the educational challenges and unique opportunities that some individuals face as students. Accordingly, she appreciates the value this diversity brings to the legal field and is genuinely committed to helping each Agape Christian Bar Prep student enter the legal profession. In addition to working with Agape Christian Bar Prep students, Ms. Damey practices real property and real estate law as a full-time attorney.'
-
-position: 'Teacher'
-
-image: 'GeraldineDamey_Thumb_Yq9sXCH8U.jpeg'
+description: >-
+  Ms. Damey is dedicated and passionate about helping others, particularly,
+  individuals with diverse educational, socio-economic, and cultural
+  backgrounds. As a child of immigrant parents, Ms. Damey understands the
+  educational challenges and unique opportunities that some individuals face as
+  students. Accordingly, she appreciates the value this diversity brings to the
+  legal field and is genuinely committed to helping each Agape Christian Bar
+  Prep student enter the legal profession. In addition to working with Agape
+  Christian Bar Prep students, Ms. Damey practices real property and real estate
+  law as a full-time attorney.
+position: Teacher
+image: GeraldineDamey_Thumb_Yq9sXCH8U.jpeg
 ---
-
 # Geraldine Damey
 
 Teacher
 
 ![my image](https://ik.imagekit.io/cpds/Agape_Christian/Geraldine_EvrS4uDQk.jpeg?updatedAt=1688263099993)
 
-### Education
+\::InfoList\{:title="Education" :list='\["Howard University School of Law, J.D., 2017","Georgia State University, M.A.T. 2013","University of Georgia, B.S. 2011"\]'\} ::
 
-- Howard University School of Law, J.D., 2017
-- Georgia State University, M.A.T. 2013
-- University of Georgia, B.S. 2011
+\::InfoList\{:title="Bar Admissions" :list='\["Georgia 2017"\]'\} ::
 
-### Bar Admissions
+\::InfoList\{:title="Expertise" :list='\["Business Entities","Contracts","Criminal Law","Property","Legal Writing"\]'\} ::
 
-- Georgia 2017
 
-### Expertise
 
-- Business Entities
-- Contracts
-- Criminal Law
-- Property
-- Legal Writing
-
-## Teacher [Biography]{.text-red}
+## Teacher \[Biography\]\{.text-red\}
 
 Ms. Damey is dedicated and passionate about helping others, particularly, individuals with diverse educational, socio-economic, and cultural backgrounds. As a child of immigrant parents, Ms. Damey understands the educational challenges and unique opportunities that some individuals face as students. Accordingly, she appreciates the value this diversity brings to the legal field and is genuinely committed to helping each Agape Christian Bar Prep student enter the legal profession. In addition to working with Agape Christian Bar Prep students, Ms. Damey practices real property and real estate law as a full-time attorney.
 
