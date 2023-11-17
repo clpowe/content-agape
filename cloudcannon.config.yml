@@ -1,8 +1,8 @@
 paths:
   uploads: uploads
 collections_config:
-  teachers:
-    path: content/teachers/
+  projects:
+    path: content/teachers
     output: false
     url:
     filter:
@@ -28,78 +28,9 @@ collections_config:
     new_preview_url:
     schemas: {}
     schema_key:
-  services:
-    path: content/services/
-    output: false
-    url:
-    filter:
-    parse_branch_index:
-    name:
-    description: ''
-    icon: notes
-    documentation:
-    preview:
-    sort:
-    sort_options:
-    singular_name:
-    singular_key:
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
-    add_options:
-    create:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    new_preview_url:
-    schemas: {}
-    schema_key:
-collection_groups:
-  - heading:
-    collections:
 _inputs: {}
 _select_data: {}
 _structures: {}
-_editables:
-  content:
-    blockquote:
-    bold:
-    bulletedlist:
-    center:
-    code:
-    copyformatting:
-    correct_orientation:
-    embed:
-    expandable:
-    format:
-    height:
-    horizontalrule:
-    image:
-    image_size_attributes: true
-    indent:
-    italic:
-    justify:
-    left:
-    link:
-    mime_type:
-    numberedlist:
-    outdent:
-    paths:
-    redo:
-    removeformat:
-    resize_style: contain
-    right:
-    snippet:
-    strike:
-    styles:
-    subscript:
-    superscript:
-    table:
-    underline:
-    undo:
-    width:
+_editables: {}
 data_config: {}
-editor:
-  default_path:
 timezone: Etc/UTC
