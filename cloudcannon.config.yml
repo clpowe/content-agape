@@ -32,8 +32,8 @@ collections_config:
     new_preview_url:
     schemas: {}
     schema_key:
-  teach:
-    path: content/teachers
+  services:
+    path: content/services
     output: false
     url:
     filter:
