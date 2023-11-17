@@ -1,9 +1,5 @@
 paths:
   uploads: uploads
-  static: ''
-  collections: 'teachers'
-  data: ''
-  layouts:
 collections_config:
   teachers:
     path: content/teachers
