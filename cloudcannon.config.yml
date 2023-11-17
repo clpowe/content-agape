@@ -67,4 +67,6 @@ _select_data: {}
 _structures: {}
 _editables: {}
 data_config: {}
+editor:
+  default_path:
 timezone: Etc/UTC
