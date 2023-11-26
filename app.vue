@@ -121,8 +121,24 @@
 		font-weight: 900;
 		text-transform: uppercase;
 	}
+	h3 {
+		font-size: var(--fs-600);
+		line-height: 0.9;
+		text-wrap: balance;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	h4 {
+		font-size: var(--fs-400);
+		line-height: 0.9;
+		text-wrap: balance;
+		font-weight: 900;
+
+		opacity: 0.7;
+	}
 
 	p {
+		margin: 0;
 		margin-bottom: 1em;
 	}
 
