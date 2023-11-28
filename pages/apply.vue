@@ -1,23 +1,63 @@
-<script setup lang="ts">
-	import { FormKitSchema } from '@formkit/vue'
-	const formData = ref({
-		username: 'christopher_io',
-		password: ''
-	})
+<script setup>
+	import { createZodPlugin } from '@formkit/zod'
+	import { z } from 'zod'
 
-	async function handleSubmit(data: any) {
-		console.log(data)
+	const supabase = useSupabaseClient()
+	const files = ref([])
+	import { reset } from '@formkit/core'
+
+	async function handleSubmit(formData) {
+		// console.log(formData.ms.EducationHistory.history)
+		await $fetch('/api/apply', {
+			method: 'POST',
+			body: formData
+		})
+		// 	formData.ms.EducationHistory.history.forEach(async (element) => {
+		// 		const url = await upload(element.file)
+		// 		files.value.push(url)
+		// 	})
+
+		// 	reset('Application')
+		// }
+
+		// async function upload(file) {
+		// 	const uuid = crypto.randomUUID()
+		// 	const { data, error } = await supabase.storage
+		// 		.from('Agape')
+		// 		.upload(uuid, file)
+		// 	if (error) {
+		// 		console.log(error)
+		// 	} else {
+		// 		return `https://nfsivlvxfmhroorykvak.supabase.co/storage/v1/object/public/Agape/${data.path}`
+		// 	}
 	}
 </script>
 
 <template>
-	<FormKit type="form" :actions="false">
-		<FormKit type="multi-step" tab-style="progress">
-			<FormKit type="step" name="Personal Information">
-				<ApplyStepOne />
+	<NuxtLayout>
+		<FormKit
+			type="form"
+			:actions="false"
+			@submit="handleSubmit"
+			id="Application"
+		>
+			<FormKit type="multi-step" name="ms" tab-style="progress">
+				<FormKit type="step" name="PersonalInformation">
+					<FormKit type="text" label="Full Name" validation="required" />
+				</FormKit>
+				<FormKit type="step" name="EducationHistory">
+					<FormKit type="file" name="history" multiple="true"></FormKit>
+					<template #stepNext>
+						<FormKit type="submit" />
+					</template>
+				</FormKit>
 			</FormKit>
+			<!-- <details>
+				<summary>Form data</summary>
+				<pre>{{ value.ms }}</pre>
+			</details> -->
 		</FormKit>
-	</FormKit>
+	</NuxtLayout>
 </template>
 
 <style>

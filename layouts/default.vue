@@ -1,11 +1,19 @@
+<script setup></script>
+
 <template>
-	<Header />
-	<NuxtLayout class="layouts">
-		<NuxtPage />
-	</NuxtLayout>
+	<div>
+		<MyHeader />
+		<main class="content-grid flow">
+			<slot />
+		</main>
+	</div>
 </template>
 
 <style>
+	@import '@unocss/reset/tailwind.css';
+	@import '@formkit/themes/genesis';
+	@import '@formkit/pro/genesis';
+	@import '@formkit/addons/css/multistep';
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 	.content-grid {

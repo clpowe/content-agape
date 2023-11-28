@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<NuxtLayout>
 		<ContentDoc class="flow content-grid" />
-	</main>
+	</NuxtLayout>
 </template>

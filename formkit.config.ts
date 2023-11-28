@@ -1,7 +1,6 @@
 import { defineFormKitConfig } from '@formkit/vue'
 import { createMultiStepPlugin } from '@formkit/addons'
 import { createProPlugin, inputs } from '@formkit/pro'
-import '@formkit/addons/css/multistep'
 
 export default defineFormKitConfig(() => {
 	// const config = useRuntimeConfig()

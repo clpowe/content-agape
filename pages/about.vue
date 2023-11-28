@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<main>
+	<NuxtLayout>
 		<ContentDoc class="flow content-grid" />
 		<div class="content-grid">
 			<div class="team-container">
@@ -19,7 +19,7 @@
 				/>
 			</div>
 		</div>
-	</main>
+	</NuxtLayout>
 </template>
 
 <style scoped>

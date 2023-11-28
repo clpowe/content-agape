@@ -7,9 +7,11 @@
 </script>
 
 <template>
-	<ContentRenderer :value="data">
-		<main>
-			<ContentRendererMarkdown :value="data" class="content-grid flow" />
-		</main>
-	</ContentRenderer>
+	<NuxtLayout>
+		<ContentRenderer :value="data">
+			<main>
+				<ContentRendererMarkdown :value="data" class="content-grid flow" />
+			</main>
+		</ContentRenderer>
+	</NuxtLayout>
 </template>
