@@ -3,6 +3,11 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: true
 	},
+	hooks: {
+		ready: () => {
+			console.log('ready')
+		}
+	},
 	app: {
 		head: {
 			viewport: 'width=device-width, initial-scale=1',
@@ -27,9 +32,10 @@ export default defineNuxtConfig({
 	],
 	formkit: {
 		autoImport: true,
+		defaultConfig: true,
 		configFile: './formkit.config.ts'
 	},
-	theme: 'genesis',
+
 	supabase: {
 		redirect: false
 	},

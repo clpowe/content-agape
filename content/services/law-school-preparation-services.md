@@ -1,6 +1,3 @@
----
----
-
 # Law school [prep]{.text-red}
 
 ## Exam prep [101]{.text-red}

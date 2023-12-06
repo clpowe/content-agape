@@ -1,7 +1,7 @@
 <template>
-	<NuxtLayout>
-		<h1 text-blue-300>Contact Us</h1>
-		<p ma-[25ch]>
+	<div>
+		<h1>Contact Us</h1>
+		<p class="max-w-l">
 			If you are interested in learning more about our services or application
 			process, please contact us at:
 		</p>
@@ -26,7 +26,7 @@
 				validation="required"
 			></FormKit>
 		</FormKit>
-	</NuxtLayout>
+	</div>
 </template>
 
 <script setup>

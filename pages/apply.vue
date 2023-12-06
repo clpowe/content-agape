@@ -34,7 +34,7 @@
 </script>
 
 <template>
-	<NuxtLayout>
+	<div>
 		<FormKit
 			type="form"
 			:actions="false"
@@ -57,7 +57,7 @@
 				<pre>{{ value.ms }}</pre>
 			</details> -->
 		</FormKit>
-	</NuxtLayout>
+	</div>
 </template>
 
 <style>

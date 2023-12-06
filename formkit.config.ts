@@ -7,5 +7,5 @@ export default defineFormKitConfig(() => {
 	const pro = createProPlugin('fk-4e814a4c22', inputs)
 	const multi = createMultiStepPlugin()
 
-	return { plugins: [multi, pro], theme: 'genesis' }
+	return { plugins: [multi, pro] }
 })
