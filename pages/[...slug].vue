@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<ContentDoc class="flow content-grid" />
+	<div class="list-disc">
+		<ContentDoc class="flow" />
 	</div>
 </template>
 

@@ -13,3 +13,10 @@
 	const { headings } = useRuntimeConfig().public.mdc
 	const generate = computed(() => props.id && headings?.anchorLinks?.h2)
 </script>
+
+<style scoped>
+	h4 {
+		color: var(--clr-black-500);
+		font-weight: 600;
+	}
+</style>

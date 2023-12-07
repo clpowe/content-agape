@@ -124,9 +124,6 @@ h4 {
 	font-size: var(--fs-400);
 	line-height: 0.9;
 	text-wrap: balance;
-	font-weight: 900;
-
-	opacity: 0.7;
 }
 
 p {

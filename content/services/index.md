@@ -33,6 +33,6 @@ Mbe Only Takers
 
 Preparing for the bar exam can feel overwhelming and impossible at times. However, a supportive learning environment and strategic plan for proper preparation can help calm these powerful emotions and help you prepare for success on the bar exam. Agape Christian Bar Prep offers the following services to equip you to succeed on the bar exam.
 
-::myLink
+::myLink{link="services/law-school-services"}
 Learn More
 ::
