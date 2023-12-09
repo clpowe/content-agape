@@ -113,6 +113,15 @@ h2,
 	font-weight: 900;
 	text-transform: uppercase;
 }
+
+h1 span {
+	color: var(--clr-secondary-400);
+}
+
+h2 span {
+	color: var(--clr-secondary-400);
+}
+
 h3 {
 	font-size: var(--fs-600);
 	line-height: 0.9;
