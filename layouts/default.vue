@@ -6,3 +6,10 @@
 		</main>
 	</div>
 </template>
+
+<style>
+	main {
+		container-type: inline-size;
+		container-name: main;
+	}
+</style>
