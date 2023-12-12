@@ -1,6 +1,5 @@
 <script setup>
 	import { register } from 'swiper/element/bundle'
-
 	register()
 
 	useSeoMeta({
@@ -35,15 +34,17 @@
 	const { data } = await useAsyncData('testimonials', () =>
 		queryContent('testimonnials').find()
 	)
+
+	const spaceBetween = 32
+	const onProgress = (e) => {
+		const [swiper, progress] = e.detail
+		console.log[progress]
+	}
+
+	const onSlideChange = (e) => {}
 </script>
 
 <template>
-	<!-- <ContentRenderer :value="data">
-		<main>
-			<ContentRendererMarkdown :value="data" class="content-grid flow" />
-		</main>
-	</ContentRenderer> -->
-
 	<h1 class="editable">We help <span>you</span> pass the bar</h1>
 	<p>Personalized service with proven results</p>
 
@@ -112,16 +113,29 @@
 		passed! The instructors are personally invested in each student passing.
 	</p>
 
-	<swiper-container>
-		<swiper-slide>Slide 1</swiper-slide>
-		<swiper-slide>Slide 2</swiper-slide>
-		<swiper-slide>Slide 3</swiper-slide>
-	</swiper-container>
-
-	<!-- <pre>
-		{{ data }}
-	</pre -->
-	>
+	<section class="breakout md:full-width">
+		<swiper-container
+			init="true"
+			:slides-per-view="1"
+			:space-between="spaceBetween"
+			:centered-slides="true"
+			loop="true"
+			:breakpoints="{
+				768: {
+					slidesPerView: 3
+				}
+			}"
+			@swiperprogress="onProgress"
+			@swiperslidechange="onSlideChange"
+		>
+			<swiper-slide v-for="slide in data" :key="slide.title">
+				<blockquote max-w="75ch" text="left">
+					<ContentRenderer :value="slide" />
+					<footer text="right">{{ slide.title }}</footer>
+				</blockquote>
+			</swiper-slide>
+		</swiper-container>
+	</section>
 </template>
 
 <style>
@@ -150,6 +164,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: opacity 0.5s ease-in-out;
 	}
 
 	swiper-slide img {
@@ -157,5 +172,12 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	.swiper-slide-prev {
+		opacity: 0.2;
+	}
+	.swiper-slide-next {
+		opacity: 0.2;
 	}
 </style>
