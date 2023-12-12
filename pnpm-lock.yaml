@@ -23,6 +23,9 @@ dependencies:
   airtable:
     specifier: ^0.12.2
     version: 0.12.2
+  nuxt-swiper:
+    specifier: ^1.2.2
+    version: 1.2.2
   swiper:
     specifier: ^11.0.5
     version: 11.0.5
@@ -6303,6 +6306,16 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
+  /nuxt-swiper@1.2.2:
+    resolution: {integrity: sha512-y4s/srISP4OuhXbYg9/W1/6EWnbcoHRGEKBKAvGP0I2h0b3enhqZNEk7854M3F89ys8waacBXektPzamgl5xwQ==}
+    dependencies:
+      '@nuxt/kit': 3.8.2
+      swiper: 10.3.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /nuxt@3.8.2(vite@4.5.0):
     resolution: {integrity: sha512-HUAyifmqTs2zcQBGvcby3KNs2pBAk+l7ZbLjD1oCNqQQ+wBuZ1qgLC4Ebu++y4g3o3Y8WAWSvpafbKRLQZziPw==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -7810,6 +7823,11 @@ packages:
       csso: 5.0.5
       picocolors: 1.0.0
     dev: true
+
+  /swiper@10.3.1:
+    resolution: {integrity: sha512-24Wk3YUdZHxjc9faID97GTu6xnLNia+adMt6qMTZG/HgdSUt4fS0REsGUXJOgpTED0Amh/j+gRGQxsLayJUlBQ==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /swiper@11.0.5:
     resolution: {integrity: sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w==}

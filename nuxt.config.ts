@@ -22,19 +22,16 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		FORMKIT_PRO_KEY: 'fk-4e814a4c22'
 	},
-	vue: {
-		compilerOptions: {
-			isCustomElement: (tag) => tag.startsWith('swiper')
-		}
-	},
 
 	modules: [
+		'nuxt-swiper',
 		'@nuxt/image',
 		'@nuxt/content',
 		'@formkit/nuxt',
 		'@unocss/nuxt',
 		'@nuxtjs/supabase'
 	],
+
 	formkit: {
 		autoImport: true,
 		defaultConfig: true,

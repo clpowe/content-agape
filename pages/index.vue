@@ -1,7 +1,4 @@
 <script setup>
-	import { register } from 'swiper/element/bundle'
-	register()
-
 	useSeoMeta({
 		title: 'Agape Christian Bar Prep',
 		description:
@@ -36,12 +33,6 @@
 	)
 
 	const spaceBetween = 32
-	const onProgress = (e) => {
-		const [swiper, progress] = e.detail
-		console.log[progress]
-	}
-
-	const onSlideChange = (e) => {}
 </script>
 
 <template>
@@ -113,28 +104,30 @@
 		passed! The instructors are personally invested in each student passing.
 	</p>
 
-	<section class="breakout md:full-width">
-		<swiper-container
-			init="true"
+	<section class="breakout">
+		<Swiper
+			:modules="[SwiperEffectCreative]"
 			:slides-per-view="1"
-			:space-between="spaceBetween"
 			:centered-slides="true"
-			loop="true"
+			:autoplay="{
+				delay: 500,
+				disableOnInteraction: true
+			}"
+			:loop="true"
 			:breakpoints="{
-				768: {
-					slidesPerView: 3
+				'800': {
+					slidesPerView: 2
 				}
 			}"
-			@swiperprogress="onProgress"
-			@swiperslidechange="onSlideChange"
 		>
-			<swiper-slide v-for="slide in data" :key="slide.title">
-				<blockquote max-w="75ch" text="left">
+			<SwiperSlide v-for="slide in data" :key="slide.title">
+				<blockquote text="left" p="8">
 					<ContentRenderer :value="slide" />
 					<footer text="right">{{ slide.title }}</footer>
 				</blockquote>
-			</swiper-slide>
-		</swiper-container>
+			</SwiperSlide>
+			<SwiperControls />
+		</Swiper>
 	</section>
 </template>
 
@@ -152,26 +145,14 @@
 			grid-auto-columns: auto;
 		}
 	}
-	swiper-container {
-		width: 100%;
-		height: 100%;
-	}
 
 	swiper-slide {
-		text-align: center;
-		font-size: 18px;
-		background: #fff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		transition: opacity 0.5s ease-in-out;
 	}
 
-	swiper-slide img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	.swiper-wrapper {
+		min-width: 100vh;
+		width: 100vh;
 	}
 
 	.swiper-slide-prev {
