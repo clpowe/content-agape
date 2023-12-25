@@ -36,8 +36,11 @@
 </script>
 
 <template>
-	<h1 class="editable">We help <span>you</span> pass the bar</h1>
-	<p>Personalized service with proven results</p>
+	<div>
+		<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
+		<p>Personalized service with proven results</p>
+		<NuxtLink>Apply Now</NuxtLink>
+	</div>
 
 	<NuxtImg
 		src="homeHero.png"
@@ -132,6 +135,9 @@
 </template>
 
 <style>
+	.homeh1 {
+		font-size: clamp(4rem, calc(0.1rem + 8vw), 9.52rem);
+	}
 	.my-grid {
 		display: grid;
 		grid-auto-columns: auto;

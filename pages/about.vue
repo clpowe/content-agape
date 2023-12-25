@@ -6,18 +6,17 @@
 
 <template>
 	<div>
-		<ContentDoc class="flow content-grid" />
-		<div class="content-grid">
-			<div class="team-container">
-				<TeacherCard
-					v-for="teacher in data"
-					:key="teacher.title"
-					:name="teacher.title"
-					:image="teacher.image"
-					:role="teacher.position"
-					:link="teacher._path"
-				/>
-			</div>
+		<ContentDoc class="flow" />
+
+		<div class="team-container">
+			<TeacherCard
+				v-for="teacher in data"
+				:key="teacher.title"
+				:name="teacher.title"
+				:image="teacher.image"
+				:role="teacher.position"
+				:link="teacher._path"
+			/>
 		</div>
 	</div>
 </template>

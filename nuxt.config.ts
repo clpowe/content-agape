@@ -29,7 +29,8 @@ export default defineNuxtConfig({
 		'@nuxt/content',
 		'@formkit/nuxt',
 		'@unocss/nuxt',
-		'@nuxtjs/supabase'
+		'@nuxtjs/supabase',
+		'@vueuse/nuxt'
 	],
 
 	formkit: {

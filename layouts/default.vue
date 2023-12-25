@@ -5,6 +5,7 @@
 			<slot />
 		</main>
 	</div>
+	<MyFooter />
 </template>
 
 <style>
