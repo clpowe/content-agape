@@ -35,7 +35,10 @@ import type { LazyProseCodeInline } from '#build/components';
 
 			<button @click="openMenu">Menu</button>
 			<dialog ref="menuRef" class="bg-black text-white text-xl">
-				<button autofocus @click="closeMenu">Close</button>
+				<button @click="closeMenu" flex gap="2" items="center" mb="6">
+					<div class="i-carbon:close" text="2xl" />
+					Close
+				</button>
 				<nav ref="nav" class="block md:hidden">
 					<ul class="mobileMenu">
 						<li v-for="link in navigation">
