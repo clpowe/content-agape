@@ -1,14 +1,24 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
+	const route = useRoute()
+	watch(
+		() => route.path,
+		() => closeMenu()
+	)
+
 	const menuRef = ref<HTMLDialogElement | null>(null)
 	const nav = ref(null)
+	const closebtn = ref<HTMLButtonElement | null>(null)
 
 	function openMenu() {
 		menuRef.value?.showModal()
+		closebtn.value?.blur()
 	}
 	function closeMenu() {
 		menuRef.value?.close()
 	}
+
+	watch
 
 	onClickOutside(nav, () => menuRef.value?.close())
 
@@ -33,9 +43,20 @@ import type { LazyProseCodeInline } from '#build/components';
 				<NuxtLink uppercase font="bold"> Agape Christian Bar Prep </NuxtLink>
 			</div>
 
-			<button @click="openMenu">Menu</button>
+			<button flex gap-2 items-center md="hidden" @click="openMenu">
+				<div class="i-carbon:menu" text="2xl" />
+				Menu
+			</button>
 			<dialog ref="menuRef" class="bg-black text-white text-xl">
-				<button @click="closeMenu" flex gap="2" items="center" mb="6">
+				<button
+					@click="closeMenu"
+					ref="closebtn"
+					autofocus
+					flex
+					gap="2"
+					items="center"
+					mb="6"
+				>
 					<div class="i-carbon:close" text="2xl" />
 					Close
 				</button>
@@ -113,7 +134,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		min-width: 100vw;
 		top: 0;
 		left: 0;
-		animation: slide-out 0.4s ease-out;
+		animation: slide-out 0.2s ease-out;
 	}
 	@starting-style {
 		dialog[open] {
@@ -126,7 +147,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		}
 	}
 	dialog[open] {
-		animation: slide-in 0.4s ease-out;
+		animation: slide-in 0.3s ease-out;
 	}
 
 	dialog[open]::backdrop {
