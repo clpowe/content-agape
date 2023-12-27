@@ -9,16 +9,15 @@ import type { LazyProseCodeInline } from '#build/components';
 	const menuRef = ref<HTMLDialogElement | null>(null)
 	const nav = ref(null)
 	const closebtn = ref<HTMLButtonElement | null>(null)
+	const { focused } = useFocus(closebtn)
 
 	function openMenu() {
 		menuRef.value?.showModal()
-		closebtn.value?.blur()
+		focused.value = true
 	}
 	function closeMenu() {
 		menuRef.value?.close()
 	}
-
-	watch
 
 	onClickOutside(nav, () => menuRef.value?.close())
 
@@ -51,11 +50,11 @@ import type { LazyProseCodeInline } from '#build/components';
 				<button
 					@click="closeMenu"
 					ref="closebtn"
-					autofocus
 					flex
 					gap="2"
 					items="center"
 					mb="6"
+					autofocus
 				>
 					<div class="i-carbon:close" text="2xl" />
 					Close
