@@ -50,53 +50,88 @@
 		studying"
 		class="w-full"
 	/>
-	<h2 class="editable">Our <span> service </span></h2>
-	<p>
-		Agape Christian Bar Prep offers many services to help students prepare for
-		success in law school and on the bar exam.  Our services are customized to
-		clearly identify and meet the individual needs of law students and law
-		school graduates.
-	</p>
-	<div class="my-grid">
-		<div>
-			<h3>Bar Prep</h3>
-			<p>
+	<section class="flex gap-4 flex-col md:flex-row">
+		<h2 class="editable">Our <span> service </span></h2>
+		<p class="max-w-[75ch]">
+			Agape Christian Bar Prep offers many services to help students prepare for
+			success in law school and on the bar exam.  Our services are customized to
+			clearly identify and meet the individual needs of law students and law
+			school graduates.
+		</p>
+	</section>
+	<div
+		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+	>
+		<UCard class="flex">
+			<h3 class="editable f-text-16-24">Bar Prep</h3>
+
+			<p class="editable">
 				Preparing for the bar exam can be challenging, but Agape Christian Bar
 				Prep provides a supportive learning environment and strategic plan to
 				help you succeed.
 			</p>
-			<NuxtLink>Learn more</NuxtLink>
-		</div>
-		<div>
-			<h3>Law School Exam Prep</h3>
-			<p>
+
+			<UButton
+				icon="i-heroicons-chevron-right"
+				color="black"
+				variant="solid"
+				class="uppercase"
+				to="apply"
+				trailing
+				>Learn more</UButton
+			>
+		</UCard>
+		<UCard>
+			<h3 class="editable f-text-16-24">Law School Exam Prep</h3>
+
+			<p class="editable">
 				Ease the anxiety of law school and law school exams and reach your full
 				potential academically with our expert help.
 			</p>
-			<NuxtLink>Learn more</NuxtLink>
-		</div>
-		<div>
-			<h3>Consultations</h3>
-			<p>
+
+			<UButton
+				icon="i-heroicons-chevron-right"
+				color="black"
+				variant="solid"
+				class="uppercase"
+				to="apply"
+				trailing
+				>Learn more</UButton
+			>
+		</UCard>
+		<UCard>
+			<h3 class="editable f-text-16-24">Consultations</h3>
+
+			<p class="editable">
 				Agape Christian Bar Prep offers many services to help students prepare
 				for success in law school and on the bar exam.
 			</p>
-			<NuxtLink>Learn more</NuxtLink>
-		</div>
-	</div>
 
-	<h2 class="editable">
-		How our Program is
-		<span> diffrent</span>
-	</h2>
-	<p class="editable">
-		Agape Christian Bar Prep helps students prepare to pass the bar exam through
-		personalized services that offer a holistic approach to bar exam
-		preparation. Our program is uniquely designed to meet the individual
-		spiritual, mental, emotional and academic needs of students while
-		simultaneously empowering them to conquer the bar exam and achieve their
-		dreams of becoming attorneys.
-	</p>
+			<UButton
+				icon="i-heroicons-chevron-right"
+				color="black"
+				variant="solid"
+				class="uppercase mt-auto"
+				to="apply"
+				trailing
+				>Learn more</UButton
+			>
+		</UCard>
+	</div>
+	<section class="flex gap-4 flex-col md:flex-row">
+		<h2 class="editable">
+			How our Program is
+			<span> diffrent</span>
+		</h2>
+		<p class="editable">
+			Agape Christian Bar Prep helps students prepare to pass the bar exam
+			through personalized services that offer a holistic approach to bar exam
+			preparation. Our program is uniquely designed to meet the individual
+			spiritual, mental, emotional and academic needs of students while
+			simultaneously empowering them to conquer the bar exam and achieve their
+			dreams of becoming attorneys.
+		</p>
+	</section>
 
 	<h2 class="editable">
 		<span>Student</span>
