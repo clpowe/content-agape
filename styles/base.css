@@ -54,17 +54,21 @@ img.full-width {
 	--fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
 	--fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
 
-	--clr-primary-300: hsl(219, 76%, 55%);
-	--clr-primary-400: hsl(219, 76%, 40%);
-	--clr-primary-500: hsl(219, 76%, 25%);
-	--clr-secondary-300: hsl(358, 90%, 45%);
-	--clr-secondary-400: hsl(358, 90%, 30%);
-	--clr-secondary-500: hsl(358, 90%, 15%);
 	--clr-accent-200: hsl(358, 85%, 80%);
 	--clr-accent-300: hsl(358, 72%, 65%);
 	--clr-accent-400: hsl(358, 72%, 50%);
 	--clr-accent-500: hsl(358, 72%, 35%);
 
+	--clr-secondary-50: #ff7961;
+	--clr-secondary-100: #ff644d;
+	--clr-secondary-200: #ff4b33;
+	--clr-secondary-300: #ff1e05;
+	--clr-secondary-400: #cc1100;
+	--clr-secondary-500: #940a00;
+	--clr-secondary-600: #740701;
+	--clr-secondary-700: #470300;
+	--clr-secondary-800: #230201;
+	--clr-secondary-900: #0e0101;
 	--clr-black-200: hsl(0, 0%, 80%);
 	--clr-black-400: hsl(0, 0%, 40%);
 	--clr-black-500: hsl(0, 0%, 7%);
@@ -115,11 +119,11 @@ h2,
 }
 
 h1 span {
-	color: var(--clr-secondary-400);
+	color: var(--clr-secondary-500);
 }
 
 h2 span {
-	color: var(--clr-secondary-400);
+	color: var(--clr-secondary-500);
 }
 
 h3 {

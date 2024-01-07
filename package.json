@@ -26,7 +26,6 @@
 		"@vueuse/nuxt": "^10.7.0",
 		"airtable": "^0.12.2",
 		"nuxt-swiper": "^1.2.2",
-		"radix-vue": "^1.2.4",
 		"swiper": "^11.0.5",
 		"zod": "^3.22.4"
 	}

@@ -39,7 +39,9 @@
 	<div>
 		<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
 		<p>Personalized service with proven results</p>
-		<NuxtLink>Apply Now</NuxtLink>
+		<UButton color="agape" variant="solid" class="uppercase" to="apply"
+			>Apply Now</UButton
+		>
 	</div>
 
 	<NuxtImg

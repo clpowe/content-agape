@@ -28,6 +28,7 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/content',
 		'@formkit/nuxt',
+		'@nuxt/ui',
 		'@unocss/nuxt',
 		'@nuxtjs/supabase',
 		'@vueuse/nuxt'
@@ -43,6 +44,8 @@ export default defineNuxtConfig({
 		redirect: false
 	},
 	unocss: {
+		uno: false,
+		preflight: false,
 		attributify: true,
 		icons: true
 	},
