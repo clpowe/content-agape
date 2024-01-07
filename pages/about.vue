@@ -5,8 +5,8 @@
 </script>
 
 <template>
-	<h2>About Agape <span>Christian</span>Bar Prep</h2>
-	<p>
+	<h2 class="editable">About Agape <span>Christian</span>Bar Prep</h2>
+	<p class="editable">
 		Our mission at Agape Christian Bar Prep is to inspire and foster the
 		learning of law students globally and empower them along their journey to
 		esquire and beyond, while sharing the love, comfort and compassion of Jesus
@@ -16,7 +16,7 @@
 		programmatic barriers to learning so they can fully develop their
 		intellectual potential.
 	</p>
-	<p>
+	<p class="editable">
 		Agape Christian Bar Prep is committed to creating a supportive and
 		personalized learning environment to help students thrive and excel
 		academically. Integrated into our programs is an accountability system to
