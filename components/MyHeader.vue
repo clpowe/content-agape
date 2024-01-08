@@ -1,5 +1,7 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
+	import IconLogo from '~/assets/agape-logo.svg'
+
 	const route = useRoute()
 	watch(
 		() => route.path,
@@ -39,8 +41,8 @@ import type { LazyProseCodeInline } from '#build/components';
 		</div>
 		<div class="primary-header primary-header__layout">
 			<div class="logo">
-				<NuxtLink class="uppercase font-bold">
-					Agape Christian Bar Prep
+				<NuxtLink>
+					<IconLogo class="w-16 h-16" :fontControlled="false" />
 				</NuxtLink>
 			</div>
 
@@ -53,7 +55,7 @@ import type { LazyProseCodeInline } from '#build/components';
 				trailing="true"
 			/>
 
-			<dialog ref="menuRef" class="bg-black text-white text-xl">
+			<dialog ref="menuRef" class="bg-black text-white text-xl p-8">
 				<UButton
 					@click="closeMenu"
 					ref="closebtn"
@@ -105,7 +107,6 @@ import type { LazyProseCodeInline } from '#build/components';
 	}
 
 	.logo {
-		max-width: 250px;
 	}
 
 	.deskMenu {

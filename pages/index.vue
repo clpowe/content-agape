@@ -60,10 +60,10 @@
 	<div
 		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
 	>
-		<UCard class="flex">
-			<h3 class="editable f-text-16-24">Bar Prep</h3>
+		<div class="flex flex-col">
+			<h3 class="editable text-2xl">Bar Prep</h3>
 
-			<p class="editable">
+			<p class="editable text-base">
 				Preparing for the bar exam can be challenging, but Agape Christian Bar
 				Prep provides a supportive learning environment and strategic plan to
 				help you succeed.
@@ -76,13 +76,14 @@
 				class="uppercase"
 				to="apply"
 				trailing
+				:block="false"
 				>Learn more</UButton
 			>
-		</UCard>
-		<UCard>
-			<h3 class="editable f-text-16-24">Law School Exam Prep</h3>
+		</div>
+		<div class="flex flex-col">
+			<h3 class="editable text-2xl">Law School Exam Prep</h3>
 
-			<p class="editable">
+			<p class="editable text-base">
 				Ease the anxiety of law school and law school exams and reach your full
 				potential academically with our expert help.
 			</p>
@@ -96,11 +97,11 @@
 				trailing
 				>Learn more</UButton
 			>
-		</UCard>
-		<UCard>
-			<h3 class="editable f-text-16-24">Consultations</h3>
+		</div>
+		<div class="flex flex-col">
+			<h3 class="editable text-2xl">Consultations</h3>
 
-			<p class="editable">
+			<p class="editable text-base">
 				Agape Christian Bar Prep offers many services to help students prepare
 				for success in law school and on the bar exam.
 			</p>
@@ -114,7 +115,7 @@
 				trailing
 				>Learn more</UButton
 			>
-		</UCard>
+		</div>
 	</div>
 	<section class="flex gap-4 flex-col md:flex-row">
 		<h2 class="editable">
@@ -159,9 +160,11 @@
 			}"
 		>
 			<SwiperSlide v-for="slide in data" :key="slide.title">
-				<blockquote text="left" p="8">
+				<blockquote class="text-left p-8 text-base">
 					<ContentRenderer :value="slide" />
-					<footer text="right">{{ slide.title }}</footer>
+					<footer class="text-right font-bold text-2xl">
+						{{ slide.title }}
+					</footer>
 				</blockquote>
 			</SwiperSlide>
 			<SwiperControls />

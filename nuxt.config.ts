@@ -30,7 +30,8 @@ export default defineNuxtConfig({
 		'@formkit/nuxt',
 		'@nuxtjs/supabase',
 		'@vueuse/nuxt',
-		'@nuxt/ui'
+		'@nuxt/ui',
+		'nuxt-svgo'
 	],
 
 	formkit: {

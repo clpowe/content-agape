@@ -4,11 +4,18 @@
 
 <template>
 	<div class="flex w-full gap-4">
-		<button bg="black" p="" text="white" @click="swiper.slideNext()">
-			<div class="i-ic:baseline-arrow-left" text="4xl"></div>
-		</button>
-		<button bg="black" p="" text="white" @click="swiper.slidePrev()">
-			<div class="i-ic:baseline-arrow-right" text="4xl"></div>
-		</button>
+		<UButton
+			color="black"
+			size="md"
+			icon="i-heroicons-chevron-left"
+			@click="swiper.slideNext()"
+		/>
+
+		<UButton
+			color="black"
+			size="md"
+			icon="i-heroicons-chevron-right"
+			@click="swiper.slidePrev()"
+		/>
 	</div>
 </template>
