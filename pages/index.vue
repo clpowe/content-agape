@@ -36,18 +36,33 @@
 </script>
 
 <template>
-	<div>
-		<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
-		<p>Personalized service with proven results</p>
-		<UButton color="red" variant="solid">Apply Now</UButton>
+	<div
+		class="full-width aspect-[8/11] sm:aspect-[8/5] md:aspect-[8/5] lg:aspect-[16/8] xl:aspect-[16/7] bg-no-repeat bg-cover bg-center bg-[url('/homeHero.png')] grid place-content-center"
+	>
+		<div class="content-grid space-y-4 mt-[96px]">
+			<h1 class="editable homeh1 text-white">
+				We help <span>you</span> pass the bar
+			</h1>
+			<!-- <p class="text-white">Personalized service with proven results</p> -->
+			<div class="flex items-center gap-2">
+				<UButton
+					color="black"
+					variant="solid"
+					class=""
+					size="xl"
+					label="find out how"
+				/>
+				<UButton
+					color="red"
+					variant="solid"
+					:block="false"
+					size="xl"
+					label="Apply Now"
+				/>
+			</div>
+		</div>
 	</div>
 
-	<NuxtImg
-		src="homeHero.png"
-		alt="Young man with glasses
-		studying"
-		class="w-full"
-	/>
 	<section class="flex gap-4 flex-col md:flex-row">
 		<h2 class="editable">Our <span> service </span></h2>
 		<p class="max-w-[75ch]">
@@ -173,8 +188,12 @@
 </template>
 
 <style>
+	.hero {
+		aspect-ratio: 5/8;
+	}
+
 	.homeh1 {
-		font-size: clamp(4rem, calc(0.1rem + 8vw), 9.52rem);
+		font-size: clamp(3rem, calc(0.1rem + 8vw), 6.52rem);
 	}
 	.my-grid {
 		display: grid;
@@ -187,6 +206,9 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill, calc(50% - 1rem));
 			grid-auto-columns: auto;
+		}
+		.hero {
+			aspect-ratio: 16/5;
 		}
 	}
 

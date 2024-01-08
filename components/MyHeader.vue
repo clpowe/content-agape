@@ -33,13 +33,13 @@ import type { LazyProseCodeInline } from '#build/components';
 </script>
 
 <template>
-	<header class="content-grid relative">
-		<div class="infobar full-width content-grid place-content-end p-2">
+	<header class="content-grid absolute z-10 text-white w-full">
+		<!-- <div class="infobar full-width content-grid place-content-end p-2">
 			<div class="text-base justify-self-end uppercase">
 				Phone: 1-800-321-5588
 			</div>
-		</div>
-		<div class="primary-header primary-header__layout">
+		</div> -->
+		<div class="primary-header primary-header__layout w-full text-white">
 			<div class="logo">
 				<NuxtLink>
 					<IconLogo class="w-16 h-16" :fontControlled="false" />
@@ -55,16 +55,20 @@ import type { LazyProseCodeInline } from '#build/components';
 				trailing="true"
 			/>
 
-			<dialog ref="menuRef" class="bg-black text-white text-xl p-8">
+			<dialog
+				ref="menuRef"
+				class="bg-[var(--clr-black-500)] text-white text-xl p-8"
+			>
 				<UButton
 					@click="closeMenu"
 					ref="closebtn"
-					class="flex gap-2 items-center mb-6"
+					color="black"
 					autofocus
-				>
-					<UIcon name="i-heroicons-x-mark" />
-					Close
-				</UButton>
+					variant="ghost"
+					label="close"
+					icon="i-heroicons-x-mark"
+				/>
+
 				<nav ref="nav" class="block md:hidden">
 					<ul class="mobileMenu">
 						<li v-for="link in navigation">
@@ -97,7 +101,7 @@ import type { LazyProseCodeInline } from '#build/components';
 
 	.primary-header {
 		padding-block: 1rem;
-		margin-block-end: 3rem;
+		/* margin-block-end: 3rem; */
 	}
 
 	.primary-header__layout {
@@ -122,7 +126,8 @@ import type { LazyProseCodeInline } from '#build/components';
 		color: inherit;
 		font-size: var(--fs-300);
 		text-transform: uppercase;
-		font-weight: 900;
+		letter-spacing: 0.15em;
+		font-weight: 500;
 		text-decoration: none;
 	}
 
