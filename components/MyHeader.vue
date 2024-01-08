@@ -33,32 +33,36 @@ import type { LazyProseCodeInline } from '#build/components';
 <template>
 	<header class="content-grid relative">
 		<div class="infobar full-width content-grid place-content-end p-2">
-			<div text="base" uppercase class="justify-self-end">
+			<div class="text-base justify-self-end uppercase">
 				Phone: 1-800-321-5588
 			</div>
 		</div>
 		<div class="primary-header primary-header__layout">
 			<div class="logo">
-				<NuxtLink uppercase font="bold"> Agape Christian Bar Prep </NuxtLink>
+				<NuxtLink class="uppercase font-bold">
+					Agape Christian Bar Prep
+				</NuxtLink>
 			</div>
 
-			<button flex gap-2 items-center md="hidden" @click="openMenu">
-				<div class="i-carbon:menu" text="2xl" />
-				Menu
-			</button>
+			<UButton
+				icon="i-heroicons-bars-3"
+				class="md:hidden"
+				label="Menu"
+				color="black"
+				@click="openMenu"
+				trailing="true"
+			/>
+
 			<dialog ref="menuRef" class="bg-black text-white text-xl">
-				<button
+				<UButton
 					@click="closeMenu"
 					ref="closebtn"
-					flex
-					gap="2"
-					items="center"
-					mb="6"
+					class="flex gap-2 items-center mb-6"
 					autofocus
 				>
-					<div class="i-carbon:close" text="2xl" />
+					<UIcon name="i-heroicons-x-mark" />
 					Close
-				</button>
+				</UButton>
 				<nav ref="nav" class="block md:hidden">
 					<ul class="mobileMenu">
 						<li v-for="link in navigation">

@@ -1,11 +1,10 @@
 import type { Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
 	theme: {
 		extend: {
 			colors: {
-				agape: {
+				red: {
 					'50': '#ff7961',
 					'100': '#ff644d',
 					'200': '#ff4b33',

@@ -28,10 +28,9 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/content',
 		'@formkit/nuxt',
-		'@nuxt/ui',
-		'@unocss/nuxt',
 		'@nuxtjs/supabase',
-		'@vueuse/nuxt'
+		'@vueuse/nuxt',
+		'@nuxt/ui'
 	],
 
 	formkit: {
@@ -43,12 +42,7 @@ export default defineNuxtConfig({
 	supabase: {
 		redirect: false
 	},
-	unocss: {
-		uno: false,
-		preflight: false,
-		attributify: true,
-		icons: true
-	},
+
 	image: {
 		imagekit: {
 			baseURL: 'https://ik.imagekit.io/cpds/Agape_Christian/'
