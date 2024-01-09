@@ -22,7 +22,9 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		FORMKIT_PRO_KEY: 'fk-4e814a4c22'
 	},
-
+	colorMode: {
+		preference: 'light'
+	},
 	modules: [
 		'nuxt-swiper',
 		'@nuxt/image',
@@ -33,7 +35,7 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'nuxt-svgo'
 	],
-
+	extends: ['@nuxt/ui-pro'],
 	formkit: {
 		autoImport: true,
 		defaultConfig: true,

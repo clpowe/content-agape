@@ -72,6 +72,9 @@
 			school graduates.
 		</p>
 	</section>
+	<UPageGrid>
+		<UPageCard> </UPageCard>
+	</UPageGrid>
 	<div
 		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
 	>

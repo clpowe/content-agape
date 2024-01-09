@@ -1,5 +1,6 @@
 export default defineAppConfig({
 	ui: {
-		gray: 'cool'
+		gray: 'cool',
+		footer: {}
 	}
 })

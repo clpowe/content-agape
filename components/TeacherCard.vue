@@ -9,7 +9,7 @@
 
 <template>
 	<NuxtLink :to="link">
-		<figure class="card">
+		<div class="card">
 			<NuxtImg
 				:src="image"
 				height="300"
@@ -23,7 +23,7 @@
 			<p class="role">
 				{{ role }}
 			</p>
-		</figure>
+		</div>
 	</NuxtLink>
 </template>
 

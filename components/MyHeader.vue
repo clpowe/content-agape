@@ -2,6 +2,41 @@ import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
 	import IconLogo from '~/assets/agape-logo.svg'
 
+	import type { NavItem } from '@nuxt/content/dist/runtime/types'
+
+	// const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
+
+	const navigation = ref([
+		{ name: 'home', link: '/' },
+		{ name: 'about', link: '/about' },
+		{ name: 'services', link: '/services' },
+		{ name: 'contact', link: '/contact' },
+		{ name: 'apply', link: '/apply' }
+	])
+
+	const links = [
+		{
+			label: 'Home',
+			to: '/'
+		},
+		{
+			label: 'About',
+			to: '/about'
+		},
+		{
+			label: 'Services',
+			to: '/services'
+		},
+		{
+			label: 'Contact',
+			to: '/contact'
+		},
+		{
+			label: 'Apply',
+			to: '/apply'
+		}
+	]
+
 	const route = useRoute()
 	watch(
 		() => route.path,
@@ -22,23 +57,39 @@ import type { LazyProseCodeInline } from '#build/components';
 	}
 
 	onClickOutside(nav, () => menuRef.value?.close())
-
-	const navigation = ref([
-		{ name: 'home', link: '/' },
-		{ name: 'about', link: '/about' },
-		{ name: 'services', link: '/services' },
-		{ name: 'contact', link: '/contact' },
-		{ name: 'apply', link: '/apply' }
-	])
 </script>
 
 <template>
+	<!-- <UHeader :links="links">
+		<template #logo>
+			<IconLogo class="w-auto h-6" :fontControlled="false" />
+			<Logo class="w-auto h-6" />
+		</template>
+
+		<template #right>
+			<UDocsSearchButton label="" />
+
+			<UColorModeButton />
+
+			<UButton
+				to="https://github.com/nuxt/ui"
+				target="_blank"
+				icon="i-simple-icons-github"
+				color="gray"
+				variant="ghost"
+			/>
+		</template>
+
+		<template #panel>
+			<UNavigationTree :links="mapContentNavigation(navigation)" />
+		</template>
+	</UHeader> -->
 	<header class="content-grid absolute z-10 text-white w-full">
-		<!-- <div class="infobar full-width content-grid place-content-end p-2">
+		<div class="infobar full-width content-grid place-content-end p-2">
 			<div class="text-base justify-self-end uppercase">
 				Phone: 1-800-321-5588
 			</div>
-		</div> -->
+		</div>
 		<div class="primary-header primary-header__layout w-full text-white">
 			<div class="logo">
 				<NuxtLink>
@@ -68,7 +119,7 @@ import type { LazyProseCodeInline } from '#build/components';
 					label="close"
 					icon="i-heroicons-x-mark"
 				/>
-
+				<UColorModeToggle />
 				<nav ref="nav" class="block md:hidden">
 					<ul class="mobileMenu">
 						<li v-for="link in navigation">
