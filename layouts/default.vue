@@ -2,9 +2,9 @@
 	<div class="parent">
 		<MyHeader />
 
-		<UMain class="content-grid flow">
+		<main class="content-grid flow">
 			<slot />
-		</UMain>
+		</main>
 
 		<MyFooter />
 	</div>

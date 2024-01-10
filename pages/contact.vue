@@ -1,12 +1,12 @@
 <template>
+	<InnerHero title="Contact Us" />
 	<div>
-		<h1>Contact Us</h1>
 		<p class="max-w-l">
 			If you are interested in learning more about our services or application
 			process, please contact us at:
 		</p>
 		{{ errMsg }}
-		<FormKit type="form" @submit="handleClick">
+		<!-- <FormKit type="form" @submit="handleClick">
 			<FormKit
 				type="text"
 				label="Full Name"
@@ -25,7 +25,7 @@
 				name="message"
 				validation="required"
 			></FormKit>
-		</FormKit>
+		</FormKit> -->
 	</div>
 </template>
 

@@ -19,27 +19,19 @@ export default defineNuxtConfig({
 	content: {
 		documentDriven: true
 	},
-	runtimeConfig: {
-		FORMKIT_PRO_KEY: 'fk-4e814a4c22'
-	},
-	colorMode: {
-		preference: 'light'
-	},
+
 	modules: [
 		'nuxt-swiper',
 		'@nuxt/image',
 		'@nuxt/content',
-		'@formkit/nuxt',
 		'@nuxtjs/supabase',
 		'@vueuse/nuxt',
-		'@nuxt/ui',
-		'nuxt-svgo'
+		'nuxt-svgo',
+		'@unocss/nuxt',
+		'shadcn-nuxt'
 	],
-	extends: ['@nuxt/ui-pro'],
-	formkit: {
-		autoImport: true,
-		defaultConfig: true,
-		configFile: './formkit.config.ts'
+	shadcn: {
+		componentDir: './components/ui'
 	},
 
 	supabase: {

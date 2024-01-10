@@ -4,14 +4,14 @@
 
 <template>
 	<div class="flex w-full gap-4">
-		<UButton
+		<button
 			color="black"
 			size="md"
 			icon="i-heroicons-chevron-left"
 			@click="swiper.slideNext()"
 		/>
 
-		<UButton
+		<button
 			color="black"
 			size="md"
 			icon="i-heroicons-chevron-right"

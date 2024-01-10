@@ -2,14 +2,14 @@
 	"style": "default",
 	"typescript": true,
 	"tailwind": {
-		"config": "tailwind.config.js",
-		"css": "src/assets/index.css",
-		"baseColor": "neutral",
-		"cssVariables": true
+		"config": "uno.config.js",
+		"css": "styles/base.css",
+		"baseColor": "slate",
+		"cssVariables": false
 	},
 	"framework": "vite",
 	"aliases": {
 		"components": "@/components",
-		"utils": "@/lib/utils"
+		"utils": "@src/lib/utils"
 	}
 }

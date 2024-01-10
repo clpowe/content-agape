@@ -5,13 +5,9 @@
 </script>
 
 <template>
-	<div class="p-6 pt-44 bg-gray-800 full-width">
-		<div class="content-grid">
-			<h1 class="text-white">About Agape</h1>
-		</div>
-	</div>
-	<UPage>
-		<UPageBody class="flow">
+	<InnerHero title="About Agape" />
+	<div>
+		<div class="flow">
 			<h2 class="editable">About Agape <span>Christian</span>Bar Prep</h2>
 			<p class="editable">
 				Our mission at Agape Christian Bar Prep is to inspire and foster the
@@ -86,7 +82,7 @@
 				uniquely positioned to mentor students who are new to the dynamics of
 				legal academia and the legal profession.
 			</p>
-			<UPageGrid>
+			<div>
 				<TeacherCard
 					v-for="teacher in data"
 					:key="teacher.title"
@@ -95,9 +91,9 @@
 					:role="teacher.position"
 					:link="teacher._path"
 				/>
-			</UPageGrid>
-		</UPageBody>
-	</UPage>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style scoped>

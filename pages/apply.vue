@@ -1,5 +1,4 @@
 <script setup>
-	import { createZodPlugin } from '@formkit/zod'
 	import { z } from 'zod'
 
 	useSeoMeta({
@@ -30,7 +29,6 @@
 
 	const supabase = useSupabaseClient()
 	const files = ref([])
-	import { reset } from '@formkit/core'
 
 	const communication = [
 		{ label: 'Email', value: 'Email' },
@@ -80,8 +78,9 @@
 </script>
 
 <template>
+	<InnerHero title="Apply Now" />
 	<div>
-		<FormKit
+		<!-- <FormKit
 			type="form"
 			:actions="false"
 			@submit="handleSubmit"
@@ -171,11 +170,8 @@
 					</template>
 				</FormKit>
 			</FormKit>
-			<!-- <details>
-				<summary>Form data</summary>
-				<pre>{{ value.ms }}</pre>
-			</details> -->
-		</FormKit>
+			
+		</FormKit> -->
 	</div>
 </template>
 

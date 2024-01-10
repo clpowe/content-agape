@@ -1,6 +1,6 @@
 <template>
 	<div class="content-grid">
-		<UFooter :links="links">
+		<!-- <UFooter :links="links">
 			<template #left> Copyright © {{ new Date().getFullYear() }} </template>
 
 			<template #right>
@@ -26,7 +26,7 @@
 					target="_blank"
 				/>
 			</template>
-		</UFooter>
+		</UFooter> -->
 	</div>
 </template>
 

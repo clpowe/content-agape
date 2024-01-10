@@ -11,7 +11,23 @@ description: >-
   law as a full-time attorney.
 position: Teacher
 image: GeraldineDamey_Thumb_Yq9sXCH8U.jpeg
+
+education:
+  - Howard University School of Law, J.D., 2017
+  - Georgia State University, M.A.T. 2013
+  - University of Georgia, B.S. 2011"
+
+admissions:
+  - Georgia 2017
+
+expertise:
+  - Business Entities
+  - Contracts
+  - Criminal Law
+  - Property
+  - Legal Writing
 ---
+
 # Geraldine Damey
 
 Teacher
@@ -23,8 +39,6 @@ Teacher
 \::InfoList\{:title="Bar Admissions" :list='\["Georgia 2017"\]'\} ::
 
 \::InfoList\{:title="Expertise" :list='\["Business Entities","Contracts","Criminal Law","Property","Legal Writing"\]'\} ::
-
-
 
 ## Teacher \[Biography\]\{.text-red\}
 

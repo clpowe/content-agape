@@ -1,6 +1,7 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
 	import IconLogo from '~/assets/agape-logo.svg'
+	import { Button } from '../components/ui/button'
 
 	import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
@@ -97,20 +98,26 @@ import type { LazyProseCodeInline } from '#build/components';
 				</NuxtLink>
 			</div>
 
-			<UButton
-				icon="i-heroicons-bars-3"
-				class="md:hidden"
-				label="Menu"
-				color="black"
-				@click="openMenu"
-				trailing="true"
-			/>
+			<Button @click="openMenu" variant="ghost" class="flex md:hidden">
+				<div class="i-heroicons-bars-3"></div>
+				menu</Button
+			>
 
 			<dialog
 				ref="menuRef"
 				class="bg-[var(--clr-black-500)] text-white text-xl p-8"
 			>
-				<UButton
+				<Button
+					autofocus
+					@click="closeMenu"
+					ref="closebtn"
+					variant="ghost"
+					class="flex items-center gap-2 text-xl md:hidden"
+				>
+					<div class="i-heroicons-x-mark"></div>
+					close</Button
+				>
+				<button
 					@click="closeMenu"
 					ref="closebtn"
 					color="black"
@@ -119,7 +126,7 @@ import type { LazyProseCodeInline } from '#build/components';
 					label="close"
 					icon="i-heroicons-x-mark"
 				/>
-				<UColorModeToggle />
+
 				<nav ref="nav" class="block md:hidden">
 					<ul class="mobileMenu">
 						<li v-for="link in navigation">

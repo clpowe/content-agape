@@ -37,7 +37,7 @@
 
 <template>
 	<div
-		class="full-width aspect-[8/11] sm:aspect-[8/5] md:aspect-[8/5] lg:aspect-[16/8] xl:aspect-[16/7] bg-no-repeat bg-cover bg-center bg-[url('/homeHero.png')] grid place-content-center"
+		class="full-width aspect-[8/9] sm:aspect-[8/5] md:aspect-[8/5] lg:aspect-[16/8] xl:aspect-[16/7] bg-no-repeat bg-cover bg-center md:bg-top bg-[url(/homeHero.png)] grid place-content-center"
 	>
 		<div class="content-grid space-y-4 mt-[96px]">
 			<h1 class="editable homeh1 text-white">
@@ -45,20 +45,20 @@
 			</h1>
 			<!-- <p class="text-white">Personalized service with proven results</p> -->
 			<div class="flex items-center gap-2">
-				<UButton
+				<!-- <button
 					color="black"
 					variant="solid"
 					class=""
 					size="xl"
 					label="find out how"
 				/>
-				<UButton
+				<button
 					color="red"
 					variant="solid"
 					:block="false"
 					size="xl"
 					label="Apply Now"
-				/>
+				/> -->
 			</div>
 		</div>
 	</div>
@@ -72,9 +72,7 @@
 			school graduates.
 		</p>
 	</section>
-	<UPageGrid>
-		<UPageCard> </UPageCard>
-	</UPageGrid>
+
 	<div
 		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
 	>
@@ -87,7 +85,7 @@
 				help you succeed.
 			</p>
 
-			<UButton
+			<button
 				icon="i-heroicons-chevron-right"
 				color="black"
 				variant="solid"
@@ -95,8 +93,9 @@
 				to="apply"
 				trailing
 				:block="false"
-				>Learn more</UButton
 			>
+				Learn more
+			</button>
 		</div>
 		<div class="flex flex-col">
 			<h3 class="editable text-2xl">Law School Exam Prep</h3>
@@ -106,15 +105,16 @@
 				potential academically with our expert help.
 			</p>
 
-			<UButton
+			<button
 				icon="i-heroicons-chevron-right"
 				color="black"
 				variant="solid"
 				class="uppercase"
 				to="apply"
 				trailing
-				>Learn more</UButton
 			>
+				Learn more
+			</button>
 		</div>
 		<div class="flex flex-col">
 			<h3 class="editable text-2xl">Consultations</h3>
@@ -124,15 +124,16 @@
 				for success in law school and on the bar exam.
 			</p>
 
-			<UButton
+			<button
 				icon="i-heroicons-chevron-right"
 				color="black"
 				variant="solid"
 				class="uppercase mt-auto"
 				to="apply"
 				trailing
-				>Learn more</UButton
 			>
+				Learn more
+			</button>
 		</div>
 	</div>
 	<section class="flex gap-4 flex-col md:flex-row">
