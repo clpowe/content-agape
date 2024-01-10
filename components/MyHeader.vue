@@ -10,7 +10,7 @@ import type { LazyProseCodeInline } from '#build/components';
 	const navigation = ref([
 		{ name: 'home', link: '/' },
 		{ name: 'about', link: '/about' },
-		{ name: 'services', link: '/services' },
+		{ name: 'services', link: 'our-services' },
 		{ name: 'contact', link: '/contact' },
 		{ name: 'apply', link: '/apply' }
 	])
@@ -26,7 +26,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		},
 		{
 			label: 'Services',
-			to: '/services'
+			to: '/our-services'
 		},
 		{
 			label: 'Contact',
