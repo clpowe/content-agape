@@ -11,7 +11,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		{ name: 'home', link: '/' },
 		{ name: 'about', link: '/about' },
 		{ name: 'services', link: '/our-services' },
-		{ name: 'contact', link: '/contact' },
+		// { name: 'contact', link: '/contact' },
 		{ name: 'apply', link: '/apply' }
 	])
 
@@ -93,15 +93,8 @@ import type { LazyProseCodeInline } from '#build/components';
 		</div>
 		<div class="primary-header primary-header__layout w-full text-white">
 			<div class="logo">
-				<NuxtLink>
-					<IconLogo class="w-16 h-16" :fontControlled="false" />
-				</NuxtLink>
+				<NuxtLink class="font-bold"> AGAPE CHRISTIAN </NuxtLink>
 			</div>
-
-			<Button @click="openMenu" variant="ghost" class="flex md:hidden">
-				<div class="i-heroicons-bars-3"></div>
-				menu</Button
-			>
 
 			<dialog
 				ref="menuRef"
@@ -139,14 +132,26 @@ import type { LazyProseCodeInline } from '#build/components';
 			</dialog>
 
 			<nav class="hidden md:block">
-				<ul class="deskMenu">
+				<ul class="deskMenu outline outline-solid outline-1 rounded-full">
 					<li v-for="link in navigation">
-						<NuxtLink :to="link.link">
+						<NuxtLink :to="link.link" class="py-2 px-3 transition-all">
 							{{ link.name }}
 						</NuxtLink>
 					</li>
 				</ul>
 			</nav>
+
+			<Button
+				@click="openMenu"
+				variant="ghost"
+				class="flex rounded-full md:hidden"
+			>
+				<div class="i-heroicons-bars-3"></div>
+				menu</Button
+			>
+			<Button class="rounded-full text-white" variant="secondary"
+				>Contact</Button
+			>
 		</div>
 	</header>
 </template>
@@ -173,15 +178,14 @@ import type { LazyProseCodeInline } from '#build/components';
 
 	.deskMenu {
 		list-style: none;
-		margin: 0;
-		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		gap: max(3vw, 1rem);
+		gap: max(1vw, 1rem);
 	}
 
 	.deskMenu a {
 		color: inherit;
+		border-radius: calc(var(--radius) - 4px);
 		font-size: var(--fs-300);
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
@@ -191,8 +195,10 @@ import type { LazyProseCodeInline } from '#build/components';
 
 	.deskMenu a:hover,
 	.deskMenu a:focus {
-		color: var(--clr-accent-500);
-		text-decoration: underline;
+		color: var(--clr-black-500);
+
+		background-color: #fff;
+		border-radius: 9999px;
 	}
 
 	dialog {
