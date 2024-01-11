@@ -180,6 +180,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		gap: max(1vw, 1rem);
 	}
 
