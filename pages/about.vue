@@ -1,6 +1,6 @@
 <script setup>
-	const { data } = await useAsyncData('teachers', () =>
-		queryContent('teachers').find()
+	const { data } = await useAsyncData('instructors', () =>
+		queryContent('instructors').find()
 	)
 </script>
 
