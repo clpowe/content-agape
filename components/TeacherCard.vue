@@ -8,22 +8,24 @@
 </script>
 
 <template>
-	<NuxtLink :to="link">
-		<div class="card">
-			<NuxtImg
-				:src="image"
-				height="300"
-				width="250"
-				provider="imagekit"
-				fit="cover"
-			/>
-			<p class="tile">
-				{{ name }}
-			</p>
-			<p class="role">
-				{{ role }}
-			</p>
-		</div>
+	<NuxtLink
+		:to="link"
+		class="h-60 md:h-80 lg:h-96 overflow-hidden rounded-[2rem] transition-all relative"
+	>
+		<NuxtImg
+			:src="image"
+			class="object-cover h-full w-full grayscale hover:grayscale-0"
+			provider="imagekit"
+			fit="cover"
+		/>
+		<p
+			class="absolute bottom-4 left-0 text-white font-bold uppercase text-3xl md:text-6xl"
+		>
+			{{ name }}
+		</p>
+		<!-- <p class="role">
+			{{ role }}
+		</p> -->
 	</NuxtLink>
 </template>
 

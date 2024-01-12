@@ -1,12 +1,27 @@
 ---
+title: 'Tisha Dunham'
+
 description: 'Ms. Dunham is the founder and Chief Executive Officer of Agape Christian Bar Prep. She is a former bar exam grader who is passionate about helping law students excel while in law school and prepare to pass the bar exam after graduation. She has been helping first-time and repeat takers prepare to pass the bar exam in jurisdictions across the United States for almost 20 years.'
 
 position: 'Founder & CEO'
 
 image: 'TishaHeadshot_4KHxRvfeY?'
----
 
-# Tisha Dunham
+education:
+  - Howard University School of Law, J.D., 2017
+  - Georgia State University, M.A.T. 2013
+  - University of Georgia, B.S. 2011"
+
+admissions:
+  - Georgia 2017
+
+expertise:
+  - Business Entities
+  - Contracts
+  - Criminal Law
+  - Property
+  - Legal Writing
+---
 
 Founder & CEO
 

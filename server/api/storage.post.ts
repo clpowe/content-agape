@@ -16,5 +16,5 @@ export default defineEventHandler(async (event) => {
 			`https://nfsivlvxfmhroorykvak.supabase.co/storage/v1/object/public/Agape/${data.path}`
 		)
 	}
-	return
+	return data
 })

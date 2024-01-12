@@ -1,6 +1,6 @@
 <script setup>
 	const { data } = await useAsyncData('instructors', () =>
-		queryContent('instructors').find()
+		queryContent('instructors').sort({ title: -1 }).find()
 	)
 </script>
 
@@ -82,7 +82,7 @@
 				uniquely positioned to mentor students who are new to the dynamics of
 				legal academia and the legal profession.
 			</p>
-			<div>
+			<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 				<TeacherCard
 					v-for="teacher in data"
 					:key="teacher.title"

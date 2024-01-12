@@ -1,26 +1,32 @@
 ---
-description: >-
+title: Shadi Thraish
+
+description:
   Throughout Mr. Traish’s careers in law and social work, his value of education
   and growth helped him develop the skills necessary to teach first-time and
   repeat bar takers. He prepares bar takers in a manner that emphasizes time
   management, personalized learning strategies, and the ability to frame lessons
-  in a real-world context.  
+  in a real-world context.
+
 position: Teacher
+
 image: Shadithumb_PqtjsaoUg.jpeg
+
+education:
+  - Stetson University College of Law, J.D., 2016
+  - University of Cincinnati, M.S.W. 2009
+  - University of Akron, B.A. 2004
+
+admissions:
+  - Florida 2016
+
+expertise:
+  - Commercial Paper
+  - Contracts
+  - Property
+  - Secured Transactions
+  - Wills & Trusts
 ---
-# Shadi Thraish
-
-Teacher
-
-![my image](https://ik.imagekit.io/cpds/Agape_Christian/Shadi_main_PGiKBXlNh.jpeg?updatedAt=1688268628751)
-
-\::InfoList\{:title="Education" :list='\["Stetson University College of Law, J.D., 2016","University of Cincinnati, M.S.W. 2009","University of Akron, B.A. 2004"\]'\} ::
-
-\::InfoList\{:title="Bar Admissions" :list='\["Florida 2016"\]'\} ::
-
-\::InfoList\{:title="Expertise" :list='\["Commercial Paper","Contracts","Property","Secured Transactions","Wills & Trusts"\]'\} ::
-
-## Teacher \[Biography\]\{.text-red\}
 
 Throughout Mr. Traish’s careers in law and social work, his value of education and growth helped him develop the skills necessary to teach first-time and repeat bar takers. He prepares bar takers in a manner that emphasizes time management, personalized learning strategies, and the ability to frame lessons in a real-world context.
 

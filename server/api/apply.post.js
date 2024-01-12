@@ -1,6 +1,6 @@
 import { serverSupabaseClient } from '#supabase/server'
 import Airtable from 'airtable'
-import { record } from 'zod'
+// import { record } from 'zod'
 
 export default defineEventHandler(async (event) => {
 	const client = await serverSupabaseClient(event)

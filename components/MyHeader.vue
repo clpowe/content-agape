@@ -104,6 +104,7 @@ import type { LazyProseCodeInline } from '#build/components';
 					autofocus
 					@click="closeMenu"
 					ref="closebtn"
+					size="sm"
 					variant="ghost"
 					class="flex items-center gap-2 text-xl md:hidden"
 				>
@@ -197,9 +198,12 @@ import type { LazyProseCodeInline } from '#build/components';
 	.deskMenu a:hover,
 	.deskMenu a:focus {
 		color: var(--clr-black-500);
-
 		background-color: #fff;
 		border-radius: 9999px;
+	}
+
+	.deskMenu li {
+		display: contents;
 	}
 
 	dialog {
