@@ -70,6 +70,7 @@
 					</p>
 				</li>
 			</ol>
+
 			<h2>About our <span>Teachers</span></h2>
 			<p>
 				Agape Christian Bar Prep's tutors are compassionate, patient, kind and

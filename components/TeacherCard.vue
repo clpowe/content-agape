@@ -10,11 +10,11 @@
 <template>
 	<NuxtLink
 		:to="link"
-		class="h-60 md:h-80 lg:h-96 overflow-hidden rounded-[2rem] transition-all relative"
+		class="h-60 md:h-80 lg:h-96 overflow-hidden rounded-[1rem] md:rounded-[2rem] transition-all relative"
 	>
 		<NuxtImg
 			:src="image"
-			class="object-cover h-full w-full grayscale hover:grayscale-0"
+			class="object-cover h-full w-full grayscale hover:grayscale-0 hover:brightness-100 brightness-50 transition-all"
 			provider="imagekit"
 			fit="cover"
 		/>

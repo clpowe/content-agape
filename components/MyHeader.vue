@@ -2,6 +2,14 @@ import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
 	import IconLogo from '~/assets/agape-logo.svg'
 	import { Button } from '../components/ui/button'
+	import {
+		Sheet,
+		SheetContent,
+		SheetDescription,
+		SheetHeader,
+		SheetTitle,
+		SheetTrigger
+	} from '@/components/ui/sheet'
 
 	import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
@@ -54,37 +62,15 @@ import type { LazyProseCodeInline } from '#build/components';
 		focused.value = true
 	}
 	function closeMenu() {
+		open.value = false
 		menuRef.value?.close()
 	}
 
+	const open = ref(true)
 	onClickOutside(nav, () => menuRef.value?.close())
 </script>
 
 <template>
-	<!-- <UHeader :links="links">
-		<template #logo>
-			<IconLogo class="w-auto h-6" :fontControlled="false" />
-			<Logo class="w-auto h-6" />
-		</template>
-
-		<template #right>
-			<UDocsSearchButton label="" />
-
-			<UColorModeButton />
-
-			<UButton
-				to="https://github.com/nuxt/ui"
-				target="_blank"
-				icon="i-simple-icons-github"
-				color="gray"
-				variant="ghost"
-			/>
-		</template>
-
-		<template #panel>
-			<UNavigationTree :links="mapContentNavigation(navigation)" />
-		</template>
-	</UHeader> -->
 	<header class="content-grid absolute z-10 text-white w-full">
 		<div class="infobar full-width content-grid place-content-end p-2">
 			<div class="text-base justify-self-end uppercase">
@@ -96,42 +82,6 @@ import type { LazyProseCodeInline } from '#build/components';
 				<NuxtLink class="font-bold"> AGAPE CHRISTIAN </NuxtLink>
 			</div>
 
-			<dialog
-				ref="menuRef"
-				class="bg-[var(--clr-black-500)] text-white text-xl p-8"
-			>
-				<Button
-					autofocus
-					@click="closeMenu"
-					ref="closebtn"
-					size="sm"
-					variant="ghost"
-					class="flex items-center gap-2 text-xl md:hidden"
-				>
-					<div class="i-heroicons-x-mark"></div>
-					close</Button
-				>
-				<button
-					@click="closeMenu"
-					ref="closebtn"
-					color="black"
-					autofocus
-					variant="ghost"
-					label="close"
-					icon="i-heroicons-x-mark"
-				/>
-
-				<nav ref="nav" class="block md:hidden">
-					<ul class="mobileMenu">
-						<li v-for="link in navigation">
-							<NuxtLink :to="link.link" class="text-3xl uppercase">
-								{{ link.name }}
-							</NuxtLink>
-						</li>
-					</ul>
-				</nav>
-			</dialog>
-
 			<nav class="hidden md:block">
 				<ul class="deskMenu outline outline-solid outline-1 rounded-full">
 					<li v-for="link in navigation">
@@ -142,17 +92,51 @@ import type { LazyProseCodeInline } from '#build/components';
 				</ul>
 			</nav>
 
-			<Button
-				@click="openMenu"
-				variant="ghost"
-				class="flex rounded-full md:hidden"
-			>
-				<div class="i-heroicons-bars-3"></div>
-				menu</Button
-			>
-			<Button class="rounded-full text-white" variant="secondary"
-				>Contact</Button
-			>
+			<div class="space-x-2 flex">
+				<Sheet>
+					<SheetTrigger>
+						<Button class="rounded-full text-white" variant="secondary">
+							contact
+						</Button>
+					</SheetTrigger>
+					<SheetContent
+						side="bottom"
+						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
+					>
+						<SheetHeader>
+							<SheetDescription>
+								<p>Hello</p>
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
+				<Sheet v-model:open="open">
+					<Button class="rounded-full text-white md:hidden" as-child>
+						<SheetTrigger class="flex items-center gap-2 text-2xl">
+							<div class="i-heroicons-bars-3 text-2xl"></div>
+							menu
+						</SheetTrigger>
+					</Button>
+					<SheetContent
+						side="top"
+						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
+					>
+						<SheetHeader>
+							<SheetDescription>
+								<nav ref="nav" class="block text-white mt-">
+									<ul class="mobileMenu">
+										<li v-for="link in navigation">
+											<NuxtLink :to="link.link" class="text-3xl uppercase">
+												{{ link.name }}
+											</NuxtLink>
+										</li>
+									</ul>
+								</nav>
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
+			</div>
 		</div>
 	</header>
 </template>

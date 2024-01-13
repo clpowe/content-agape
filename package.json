@@ -24,6 +24,7 @@
 	},
 	"dependencies": {
 		"@unocss/reset": "^0.58.3",
+		"@vee-validate/zod": "^4.12.4",
 		"@vueuse/nuxt": "^10.7.0",
 		"airtable": "^0.12.2",
 		"class-variance-authority": "^0.7.0",
@@ -35,6 +36,7 @@
 		"shadcn-vue": "^0.8.6",
 		"swiper": "^11.0.5",
 		"tailwind-merge": "^2.2.0",
+		"vee-validate": "^4.12.4",
 		"zod": "^3.22.4"
 	}
 }
