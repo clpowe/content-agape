@@ -66,7 +66,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		menuRef.value?.close()
 	}
 
-	const open = ref(true)
+	const open = ref(false)
 	onClickOutside(nav, () => menuRef.value?.close())
 </script>
 
