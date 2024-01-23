@@ -73,7 +73,7 @@
 		</p>
 	</section>
 
-	<div
+	<section
 		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
 	>
 		<div class="flex flex-col">
@@ -85,17 +85,12 @@
 				help you succeed.
 			</p>
 
-			<button
-				icon="i-heroicons-chevron-right"
-				color="black"
-				variant="solid"
-				class="uppercase"
-				to="apply"
-				trailing
-				:block="false"
-			>
-				Learn more
-			</button>
+			<Button as-child>
+				<NuxtLink class="flex items-center">
+					Learn more
+					<div class="i-heroicons-chevron-right text-2xl"></div>
+				</NuxtLink>
+			</Button>
 		</div>
 		<div class="flex flex-col">
 			<h3 class="editable text-2xl">Law School Exam Prep</h3>
@@ -105,16 +100,12 @@
 				potential academically with our expert help.
 			</p>
 
-			<button
-				icon="i-heroicons-chevron-right"
-				color="black"
-				variant="solid"
-				class="uppercase"
-				to="apply"
-				trailing
-			>
-				Learn more
-			</button>
+			<Button as-child>
+				<NuxtLink class="flex items-center">
+					Learn more
+					<div class="i-heroicons-chevron-right text-2xl"></div>
+				</NuxtLink>
+			</Button>
 		</div>
 		<div class="flex flex-col">
 			<h3 class="editable text-2xl">Consultations</h3>
@@ -124,18 +115,15 @@
 				for success in law school and on the bar exam.
 			</p>
 
-			<button
-				icon="i-heroicons-chevron-right"
-				color="black"
-				variant="solid"
-				class="uppercase mt-auto"
-				to="apply"
-				trailing
-			>
-				Learn more
-			</button>
+			<Button as-child>
+				<NuxtLink class="flex items-center">
+					Learn more
+					<div class="i-heroicons-chevron-right text-2xl"></div>
+				</NuxtLink>
+			</Button>
 		</div>
-	</div>
+	</section>
+
 	<section class="flex gap-4 flex-col md:flex-row">
 		<h2 class="editable">
 			How our Program is
@@ -151,43 +139,39 @@
 		</p>
 	</section>
 
-	<h2 class="editable">
-		<span>Student</span>
-		TESTIMONIALS
-	</h2>
-	<p class="editable">
-		I was devastated after failing the Bar on my first attempt. I was referred
-		to Agape Bar Prep and committed to passing this test the second time around.
-		Tishia and the staff at Agape fully prepared me for my second round, and I
-		passed! The instructors are personally invested in each student passing.
-	</p>
+	<section>
+		<h2 class="editable">
+			<span>Student</span>
+			TESTIMONIALS
+		</h2>
 
-	<section class="breakout">
-		<Swiper
-			:modules="[SwiperEffectCreative]"
-			:slides-per-view="1"
-			:centered-slides="true"
-			:autoplay="{
-				delay: 500,
-				disableOnInteraction: true
-			}"
-			:loop="true"
-			:breakpoints="{
-				'800': {
-					slidesPerView: 2
-				}
-			}"
-		>
-			<SwiperSlide v-for="slide in data" :key="slide.title">
-				<blockquote class="text-left p-8 text-base">
-					<ContentRenderer :value="slide" />
-					<footer class="text-right font-bold text-2xl">
-						{{ slide.title }}
-					</footer>
-				</blockquote>
-			</SwiperSlide>
-			<SwiperControls />
-		</Swiper>
+		<section class="breakout">
+			<Swiper
+				:modules="[SwiperEffectCreative]"
+				:slides-per-view="1"
+				:centered-slides="true"
+				:autoplay="{
+					delay: 500,
+					disableOnInteraction: true
+				}"
+				:loop="true"
+				:breakpoints="{
+					'800': {
+						slidesPerView: 2
+					}
+				}"
+			>
+				<SwiperSlide v-for="slide in data" :key="slide.title">
+					<blockquote class="text-left p-8 text-base">
+						<ContentRenderer :value="slide" />
+						<footer class="text-right font-bold text-2xl">
+							{{ slide.title }}
+						</footer>
+					</blockquote>
+				</SwiperSlide>
+				<SwiperControls />
+			</Swiper>
+		</section>
 	</section>
 </template>
 

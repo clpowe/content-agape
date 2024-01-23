@@ -1,6 +1,6 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
-	import IconLogo from '~/assets/agape-logo.svg'
+	import IconLogo from '@/assets/NewLogoLockup.svg'
 	import { Button } from '../components/ui/button'
 	import {
 		Sheet,
@@ -11,40 +11,12 @@ import type { LazyProseCodeInline } from '#build/components';
 		SheetTrigger
 	} from '@/components/ui/sheet'
 
-	import type { NavItem } from '@nuxt/content/dist/runtime/types'
-
-	// const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
-
 	const navigation = ref([
 		{ name: 'home', link: '/' },
 		{ name: 'about', link: '/about' },
 		{ name: 'services', link: '/our-services' },
-		// { name: 'contact', link: '/contact' },
 		{ name: 'apply', link: '/apply' }
 	])
-
-	const links = [
-		{
-			label: 'Home',
-			to: '/'
-		},
-		{
-			label: 'About',
-			to: '/about'
-		},
-		{
-			label: 'Services',
-			to: '/our-services'
-		},
-		{
-			label: 'Contact',
-			to: '/contact'
-		},
-		{
-			label: 'Apply',
-			to: '/apply'
-		}
-	]
 
 	const route = useRoute()
 	watch(
@@ -54,13 +26,7 @@ import type { LazyProseCodeInline } from '#build/components';
 
 	const menuRef = ref<HTMLDialogElement | null>(null)
 	const nav = ref(null)
-	const closebtn = ref<HTMLButtonElement | null>(null)
-	const { focused } = useFocus(closebtn)
 
-	function openMenu() {
-		menuRef.value?.showModal()
-		focused.value = true
-	}
 	function closeMenu() {
 		open.value = false
 		menuRef.value?.close()
@@ -79,7 +45,9 @@ import type { LazyProseCodeInline } from '#build/components';
 		</div>
 		<div class="primary-header primary-header__layout w-full text-white">
 			<div class="logo">
-				<NuxtLink class="font-bold"> AGAPE CHRISTIAN </NuxtLink>
+				<NuxtLink to="/" class="font-bold flex items-center gap-4 flex-wrap">
+					<IconLogo class="text-9xl fill-white" />
+				</NuxtLink>
 			</div>
 
 			<nav class="hidden md:block">
@@ -93,23 +61,8 @@ import type { LazyProseCodeInline } from '#build/components';
 			</nav>
 
 			<div class="space-x-2 flex">
-				<Sheet>
-					<SheetTrigger>
-						<Button class="rounded-full text-white" variant="secondary">
-							contact
-						</Button>
-					</SheetTrigger>
-					<SheetContent
-						side="bottom"
-						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
-					>
-						<SheetHeader>
-							<SheetDescription>
-								<p>Hello</p>
-							</SheetDescription>
-						</SheetHeader>
-					</SheetContent>
-				</Sheet>
+				<MyContact />
+
 				<Sheet v-model:open="open">
 					<Button class="rounded-full text-white md:hidden" as-child>
 						<SheetTrigger class="flex items-center gap-2 text-2xl">
@@ -122,18 +75,17 @@ import type { LazyProseCodeInline } from '#build/components';
 						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
 					>
 						<SheetHeader>
-							<SheetDescription>
-								<nav ref="nav" class="block text-white mt-">
-									<ul class="mobileMenu">
-										<li v-for="link in navigation">
-											<NuxtLink :to="link.link" class="text-3xl uppercase">
-												{{ link.name }}
-											</NuxtLink>
-										</li>
-									</ul>
-								</nav>
-							</SheetDescription>
+							<SheetTitle text-white>Menu</SheetTitle>
 						</SheetHeader>
+						<nav ref="nav" class="block text-white mt-">
+							<ul class="mobileMenu">
+								<li v-for="link in navigation">
+									<NuxtLink :to="link.link" class="text-3xl uppercase">
+										{{ link.name }}
+									</NuxtLink>
+								</li>
+							</ul>
+						</nav>
 					</SheetContent>
 				</Sheet>
 			</div>

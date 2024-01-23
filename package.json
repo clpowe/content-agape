@@ -15,7 +15,7 @@
 		"@unocss/nuxt": "^0.58.3",
 		"@unocss/preset-icons": "^0.58.3",
 		"@unocss/preset-typography": "^0.58.3",
-		"nuxt": "^3.9.1",
+		"nuxt": "^3.9.3",
 		"nuxt-svgo": "^3.7.0",
 		"shadcn-nuxt": "^0.8.6",
 		"typescript": "^5.3.3",

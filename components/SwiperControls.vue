@@ -4,18 +4,12 @@
 
 <template>
 	<div class="flex w-full gap-4">
-		<button
-			color="black"
-			size="md"
-			icon="i-heroicons-chevron-left"
-			@click="swiper.slideNext()"
-		/>
+		<Button size="icon" @click="swiper.slideNext()">
+			<span class="i-heroicons-chevron-left" />
+		</Button>
 
-		<button
-			color="black"
-			size="md"
-			icon="i-heroicons-chevron-right"
-			@click="swiper.slidePrev()"
-		/>
+		<Button size="icon" @click="swiper.slidePrev()">
+			<span class="i-heroicons-chevron-right" />
+		</Button>
 	</div>
 </template>
