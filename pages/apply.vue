@@ -1,5 +1,8 @@
 <script setup>
-	import { z } from 'zod'
+	import { useStorage } from '@vueuse/core'
+	import { useForm } from 'vee-validate'
+	import { toTypedSchema } from '@vee-validate/zod'
+	import * as z from 'zod'
 
 	useSeoMeta({
 		title: 'Agape Christian Application',
@@ -27,8 +30,44 @@
 		]
 	})
 
+	const formSchema = toTypedSchema(
+		z.object({
+			name: z.string().min(1, { message: 'Email is required' }),
+			email: z
+				.string()
+				.min(1, { message: 'Email is required' })
+				.email({ message: 'Please enter a valid email "xxx@xxx.xxx"' }),
+			message: z.string().min(1, { message: 'Message is required' }).max(15, {
+				message: 'Bio must be at least 10 characters.'
+			})
+		})
+	)
+
 	const supabase = useSupabaseClient()
 	const files = ref([])
+
+	const handleFileSelection = (event) => {
+		let uploadedFiles = event.target.files
+
+		for (let i = 0; i < uploadedFiles.length; i++) {
+			files.value.push(uploadedFiles[i])
+		}
+	}
+
+	async function submit() {
+		let formData = new FormData()
+
+		formData.append('name', name.value)
+
+		for (let i = 0; i < files.value.length; i++) {
+			formData.append('images[' + i + ']', files.value[i])
+		}
+
+		await $fetch('/api/apply', {
+			method: 'POST',
+			body: formData
+		})
+	}
 
 	const communication = [
 		{ label: 'Email', value: 'Email' },
@@ -79,14 +118,19 @@
 
 <template>
 	<InnerHero title="Apply Now" />
-	<div>
-		<!-- <FormKit
+	<!-- <ClientOnly>
+		<Vueform>
+			<TextElement name="hello_world" label="Hello" placeholder="World" />
+		</Vueform>
+	</ClientOnly> -->
+	<!-- <div>
+		<FormKit
 			type="form"
 			:actions="false"
 			@submit="handleSubmit"
 			id="Application"
 		>
-			<FormKit type="multi-step" name="ms" tab-style="tab">
+			<FormKit type="multi-step" tab-style="progress">
 				<FormKit type="step" name="PersonalInformation">
 					<FormKit type="text" label="Full Name" validation="required" />
 					<FormKit type="text" label="Mailing Address" validation="required" />
@@ -170,9 +214,8 @@
 					</template>
 				</FormKit>
 			</FormKit>
-			
-		</FormKit> -->
-	</div>
+		</FormKit> 
+	</div> -->
 </template>
 
 <style>

@@ -12,19 +12,18 @@
 		"@nuxt/content": "^2.9.0",
 		"@nuxt/image": "^1.0.0",
 		"@nuxtjs/supabase": "^1.1.4",
-		"@unocss/nuxt": "^0.58.3",
-		"@unocss/preset-icons": "^0.58.3",
-		"@unocss/preset-typography": "^0.58.3",
+		"@nuxtjs/tailwindcss": "^6.11.1",
 		"nuxt": "^3.9.3",
-		"nuxt-svgo": "^3.7.0",
-		"shadcn-nuxt": "^0.8.6",
-		"typescript": "^5.3.3",
-		"unocss-preset-animations": "^1.0.1",
-		"unocss-preset-shadcn": "^0.2.3"
+		"nuxt-svgo": "^4.0.0",
+		"shadcn-nuxt": "^0.8.7",
+		"typescript": "^5.3.3"
 	},
 	"dependencies": {
+		"@radix-icons/vue": "^1.0.0",
 		"@unocss/reset": "^0.58.3",
 		"@vee-validate/zod": "^4.12.4",
+		"@vueform/builder-nuxt": "^1.3.0",
+		"@vueform/nuxt": "^1.4.0",
 		"@vueuse/nuxt": "^10.7.0",
 		"airtable": "^0.12.2",
 		"class-variance-authority": "^0.7.0",
@@ -33,9 +32,11 @@
 		"lucide-vue-next": "^0.308.0",
 		"nuxt-swiper": "^1.2.2",
 		"radix-vue": "^1.2.7",
+		"sass": "^1.70.0",
 		"shadcn-vue": "^0.8.6",
 		"swiper": "^11.0.5",
 		"tailwind-merge": "^2.2.0",
+		"tailwindcss-animate": "^1.0.7",
 		"vee-validate": "^4.12.4",
 		"zod": "^3.22.4"
 	}

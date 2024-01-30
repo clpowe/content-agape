@@ -1,4 +1,6 @@
 <script setup>
+	import { AspectRatio } from '@/components/ui/aspect-ratio'
+
 	useSeoMeta({
 		title: 'Agape Christian Bar Prep',
 		description:
@@ -36,100 +38,96 @@
 </script>
 
 <template>
-	<div
-		class="full-width aspect-[8/9] sm:aspect-[8/5] md:aspect-[8/5] lg:aspect-[16/8] xl:aspect-[16/7] bg-no-repeat bg-cover bg-center md:bg-top bg-[url(/homeHero.png)] grid place-content-center"
-	>
-		<div class="content-grid space-y-4 mt-[96px]">
-			<h1 class="editable homeh1 text-white">
-				We help <span>you</span> pass the bar
-			</h1>
-			<!-- <p class="text-white">Personalized service with proven results</p> -->
-			<div class="flex items-center gap-2">
-				<!-- <button
-					color="black"
-					variant="solid"
-					class=""
-					size="xl"
-					label="find out how"
-				/>
-				<button
-					color="red"
-					variant="solid"
-					:block="false"
-					size="xl"
-					label="Apply Now"
-				/> -->
-			</div>
+	<div class="section-padding flow">
+		<div class="py-8 md:pt-20 md:pb-20">
+			<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
+			<p class="">Personalized service with proven results</p>
+			<div class="flex items-center gap-2"></div>
 		</div>
+		<AspectRatio
+			:ratio="16 / 6"
+			class="bg-muted overflow-hidden rounded-[1rem]"
+		>
+			<NuxtImg
+				src="/homeHero.png"
+				class="object-cover w-full"
+				alt="Young man studying"
+			/>
+		</AspectRatio>
 	</div>
 
-	<section class="flex gap-4 flex-col md:flex-row">
-		<h2 class="editable">Our <span> service </span></h2>
-		<p class="max-w-[75ch]">
-			Agape Christian Bar Prep offers many services to help students prepare for
-			success in law school and on the bar exam.  Our services are customized to
-			clearly identify and meet the individual needs of law students and law
-			school graduates.
-		</p>
+	<section
+		class="section-padding flow grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-4"
+	>
+		<div
+			class="grid grid-cols-subgrid gap-4 flex-col md:flex-row col-span-full"
+		>
+			<h2 class="editable col-span-full">Our <span> service </span></h2>
+			<p class="max-w-[75ch] col-span-full">
+				Agape Christian Bar Prep offers many services to help students prepare
+				for success in law school and on the bar exam.  Our services are
+				customized to clearly identify and meet the individual needs of law
+				students and law school graduates.
+			</p>
+		</div>
+		<article class="grid grid-cols-subgrid col-span-full gap-4">
+			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
+				<h3 class="editable text-2xl">Bar Prep</h3>
+
+				<p class="editable text-base">
+					Preparing for the bar exam can be challenging, but Agape Christian Bar
+					Prep provides a supportive learning environment and strategic plan to
+					help you succeed.
+				</p>
+
+				<Button as-child>
+					<NuxtLink class="flex items-center">
+						Learn more
+						<div class="i-heroicons-chevron-right text-2xl"></div>
+					</NuxtLink>
+				</Button>
+			</div>
+			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
+				<h3 class="editable text-2xl">Law School Exam Prep</h3>
+
+				<p class="editable text-base">
+					Ease the anxiety of law school and law school exams and reach your
+					full potential academically with our expert help.
+				</p>
+
+				<Button as-child>
+					<NuxtLink class="flex items-center">
+						Learn more
+						<div class="i-heroicons-chevron-right text-2xl"></div>
+					</NuxtLink>
+				</Button>
+			</div>
+			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
+				<h3 class="editable text-2xl">Consultations</h3>
+
+				<p class="editable text-base">
+					Agape Christian Bar Prep offers many services to help students prepare
+					for success in law school and on the bar exam.
+				</p>
+
+				<Button as-child>
+					<NuxtLink class="flex items-center">
+						Learn more
+						<div class="i-heroicons-chevron-right text-2xl"></div>
+					</NuxtLink>
+				</Button>
+			</div>
+		</article>
 	</section>
 
 	<section
-		class="grid grid-flow-row gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+		class="section-padding grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-4"
 	>
-		<div class="flex flex-col">
-			<h3 class="editable text-2xl">Bar Prep</h3>
-
-			<p class="editable text-base">
-				Preparing for the bar exam can be challenging, but Agape Christian Bar
-				Prep provides a supportive learning environment and strategic plan to
-				help you succeed.
-			</p>
-
-			<Button as-child>
-				<NuxtLink class="flex items-center">
-					Learn more
-					<div class="i-heroicons-chevron-right text-2xl"></div>
-				</NuxtLink>
-			</Button>
-		</div>
-		<div class="flex flex-col">
-			<h3 class="editable text-2xl">Law School Exam Prep</h3>
-
-			<p class="editable text-base">
-				Ease the anxiety of law school and law school exams and reach your full
-				potential academically with our expert help.
-			</p>
-
-			<Button as-child>
-				<NuxtLink class="flex items-center">
-					Learn more
-					<div class="i-heroicons-chevron-right text-2xl"></div>
-				</NuxtLink>
-			</Button>
-		</div>
-		<div class="flex flex-col">
-			<h3 class="editable text-2xl">Consultations</h3>
-
-			<p class="editable text-base">
-				Agape Christian Bar Prep offers many services to help students prepare
-				for success in law school and on the bar exam.
-			</p>
-
-			<Button as-child>
-				<NuxtLink class="flex items-center">
-					Learn more
-					<div class="i-heroicons-chevron-right text-2xl"></div>
-				</NuxtLink>
-			</Button>
-		</div>
-	</section>
-
-	<section class="flex gap-4 flex-col md:flex-row">
-		<h2 class="editable">
+		<h2 class="editable col-span-full">
 			How our Program is
 			<span> diffrent</span>
 		</h2>
-		<p class="editable">
+		<p class="max-w-[75ch] col-span-full">
 			Agape Christian Bar Prep helps students prepare to pass the bar exam
 			through personalized services that offer a holistic approach to bar exam
 			preparation. Our program is uniquely designed to meet the individual
@@ -139,13 +137,13 @@
 		</p>
 	</section>
 
-	<section>
+	<section class="section-padding">
 		<h2 class="editable">
 			<span>Student</span>
 			TESTIMONIALS
 		</h2>
 
-		<section class="breakout">
+		<section class="breakout section-padding">
 			<Swiper
 				:modules="[SwiperEffectCreative]"
 				:slides-per-view="1"

@@ -1,10 +1,11 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
-	import IconLogo from '@/assets/NewLogoLockup.svg'
+	import IconLogo from '@/assets/Asset.svg'
 	import { Button } from '../components/ui/button'
 	import {
 		Sheet,
 		SheetContent,
+		SheetClose,
 		SheetDescription,
 		SheetHeader,
 		SheetTitle,
@@ -37,21 +38,23 @@ import type { LazyProseCodeInline } from '#build/components';
 </script>
 
 <template>
-	<header class="content-grid absolute z-10 text-white w-full">
+	<header class="content-grid mx-auto z-10 text-white w-full">
 		<div class="infobar full-width content-grid place-content-end p-2">
 			<div class="text-base justify-self-end uppercase">
 				Phone: 1-800-321-5588
 			</div>
 		</div>
-		<div class="primary-header primary-header__layout w-full text-white">
+		<div class="primary-header primary-header__layout w-full">
 			<div class="logo">
 				<NuxtLink to="/" class="font-bold flex items-center gap-4 flex-wrap">
-					<IconLogo class="text-9xl fill-white" />
+					<IconLogo class="text-7xl text-primary" />
 				</NuxtLink>
 			</div>
 
 			<nav class="hidden md:block">
-				<ul class="deskMenu outline outline-solid outline-1 rounded-full">
+				<ul
+					class="deskMenu outline outline-primary outline-solid outline-1 rounded-full"
+				>
 					<li v-for="link in navigation">
 						<NuxtLink :to="link.link" class="py-2 px-3 transition-all">
 							{{ link.name }}
@@ -64,9 +67,8 @@ import type { LazyProseCodeInline } from '#build/components';
 				<MyContact />
 
 				<Sheet v-model:open="open">
-					<Button class="rounded-full text-white md:hidden" as-child>
+					<Button class="rounded-full text-primary md:hidden" as-child>
 						<SheetTrigger class="flex items-center gap-2 text-2xl">
-							<div class="i-heroicons-bars-3 text-2xl"></div>
 							menu
 						</SheetTrigger>
 					</Button>
@@ -75,7 +77,10 @@ import type { LazyProseCodeInline } from '#build/components';
 						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
 					>
 						<SheetHeader>
-							<SheetTitle text-white>Menu</SheetTitle>
+							<div flex justify-between>
+								<SheetTitle text-white>Menu</SheetTitle>
+								<SheetClose> close </SheetClose>
+							</div>
 						</SheetHeader>
 						<nav ref="nav" class="block text-white mt-">
 							<ul class="mobileMenu">
@@ -122,24 +127,31 @@ import type { LazyProseCodeInline } from '#build/components';
 	}
 
 	.deskMenu a {
-		color: inherit;
+		color: black;
 		border-radius: calc(var(--radius) - 4px);
 		font-size: var(--fs-300);
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
 		font-weight: 500;
 		text-decoration: none;
+		transition: all 0.3s var(--animation);
 	}
 
 	.deskMenu a:hover,
 	.deskMenu a:focus {
-		color: var(--clr-black-500);
-		background-color: #fff;
+		color: #fff;
+		background-color: var(--clr-black-500);
 		border-radius: 9999px;
 	}
 
 	.deskMenu li {
 		display: contents;
+	}
+
+	.deskMenu a.router-link-active {
+		background-color: var(--clr-black-500);
+		color: #fff;
+		border-radius: 9999px;
 	}
 
 	dialog {

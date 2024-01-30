@@ -27,7 +27,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/supabase',
 		'@vueuse/nuxt',
 		'nuxt-svgo',
-		'@unocss/nuxt',
+		'@vueform/nuxt',
+		'@nuxtjs/tailwindcss',
 		'shadcn-nuxt'
 	],
 	shadcn: {

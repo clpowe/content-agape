@@ -12,15 +12,9 @@ const formSchema = z.object({
 })
 
 export default defineEventHandler(async (event) => {
-	const body = await readBody(event)
-	const result = formSchema.safeParse(body)
-	if (result.success) {
-		console.log(result)
-		return result
-	} else {
-		throw createError({
-			statusCode: 400,
-			statusMessage: 'Something went wrong'
-		})
+	const body = await readFormData(event)
+	setResponseStatus(event, 200)
+	return {
+		status: 200
 	}
 })

@@ -55,12 +55,11 @@
 		>
 			<slot />
 
-			<DialogClose as-child class="absolute top-4 right-4 rounded-full">
+			<!-- <DialogClose as-child class="absolute top-4 right-4 rounded-full">
 				<Button class="rounded-full flex gap-2 text-xl uppercase">
 					<X class="w-6 h-6 text-white" />
-					<span> Close </span>
 				</Button>
-			</DialogClose>
+			</DialogClose> -->
 		</DialogContent>
 	</DialogPortal>
 </template>
