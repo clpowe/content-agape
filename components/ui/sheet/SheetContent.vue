@@ -13,7 +13,7 @@
 	import { cn } from '@/lib/utils'
 	import { Button } from '@/components/ui/button'
 
-	interface SheetContentProps extends DialogContentProps {
+	interface SheetContentProps extends /* @vue-ignore */ DialogContentProps {
 		side?: 'left' | 'right' | 'top' | 'bottom'
 		class?: string
 	}
