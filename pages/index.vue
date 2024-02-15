@@ -38,7 +38,7 @@
 </script>
 
 <template>
-	<div class="section-padding flow">
+	<div class="">
 		<div class="py-8 md:pt-20 md:pb-20">
 			<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
 			<p class="">Personalized service with proven results</p>
@@ -137,13 +137,13 @@
 		</p>
 	</section>
 
-	<section class="section-padding">
+	<section class="section-padding pt-24 lg:pt-32">
 		<h2 class="editable">
 			<span>Student</span>
 			TESTIMONIALS
 		</h2>
 
-		<section class="breakout section-padding">
+		<section class="breakout">
 			<Swiper
 				:modules="[SwiperEffectCreative]"
 				:slides-per-view="1"

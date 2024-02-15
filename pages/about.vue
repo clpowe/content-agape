@@ -34,7 +34,7 @@
 <template>
 	<InnerHero title="About Agape" />
 	<div>
-		<div class="flow">
+		<section class="section-padding">
 			<h2 class="editable">About Agape <span>Christian</span>Bar Prep</h2>
 			<p class="editable">
 				Our mission at Agape Christian Bar Prep is to inspire and foster the
@@ -55,6 +55,9 @@
 				to help them develop the independent learning, time management and
 				prioritization skills needed to adequately prepare for the bar exam.
 			</p>
+		</section>
+
+		<section class="section-padding">
 			<h2>The <span>history</span>of Agape Christian Bar prep</h2>
 			<p>
 				Agape Christian Bar Prep was started in 2015 after our founder received
@@ -68,35 +71,11 @@
 				Prep to remind these students of the thoughts and plans He has for them
 				– thoughts of peace, and not of evil, to give them an expected end.
 			</p>
+		</section>
+
+		<section class="section-padding">
 			<h2>The Path to <span>Esquire</span></h2>
-			<!-- <ol>
-				<li>
-					<p>
-						Students interested in enrolling in one of our tutoring programs or
-						writing courses must complete an application. Our team members
-						review each student’s application and create a personal plan for
-						success for that student.
-					</p>
-				</li>
-				<li>
-					<p>
-						Students accepted into one of our tutoring programs must attend a
-						week long orientation to help them prepare mentally and emotionally
-						for the rigors and stresses of bar prep. Students must also sign a
-						student commitment agreement.
-					</p>
-				</li>
-				<li>
-					<p>
-						Students accepted into one of our tutoring programs or writing
-						courses are assigned tutors who will help guide them through the
-						legal writing or bar exam preparation process, help them increase
-						their understanding of substantive, and help them develop,
-						strengthen and refine the analytical and writing skills needed to
-						pass the bar exam and excel as an attorney.
-					</p>
-				</li>
-			</ol> -->
+
 			<article class="accordion-wrap">
 				<div class="accordion" ref="accordion" @click="handleClick">
 					<div class="accordion-panel">
@@ -188,7 +167,9 @@
 					</div>
 				</div>
 			</article>
+		</section>
 
+		<section class="section-padding">
 			<h2>About our <span>Teachers</span></h2>
 			<p>
 				Agape Christian Bar Prep's tutors are compassionate, patient, kind and
@@ -211,7 +192,7 @@
 					:link="teacher._path"
 				/>
 			</div>
-		</div>
+		</section>
 	</div>
 </template>
 

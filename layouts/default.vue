@@ -12,8 +12,10 @@
 
 <style>
 	.parent {
-		display: grid;
-		grid-template-rows: auto 1fr auto;
+		display: flex;
+		flex-direction: column;
+		min-height: 100dvh;
+		/* grid-template-rows: auto 1fr auto; */
 	}
 	main {
 		container-type: inline-size;

@@ -34,7 +34,9 @@ export default defineNuxtConfig({
 	shadcn: {
 		componentDir: './components/ui'
 	},
-
+	svgo: {
+		autoImportPath: './assets/icons/'
+	},
 	supabase: {
 		redirect: false
 	},

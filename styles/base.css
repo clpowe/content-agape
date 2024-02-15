@@ -123,6 +123,7 @@ figure {
 }
 
 body {
+	min-height: 100dvh;
 	margin: 0;
 	font-family: var(--font-family);
 	font-size: var(--fs-400);
@@ -209,4 +210,14 @@ img {
 .teacher {
 	max-width: 500px;
 	width: 100%;
+}
+
+.section-padding {
+	padding-top: 80px;
+}
+
+@media (min-width: 1024px) {
+	.section-padding {
+		padding-top: 120px;
+	}
 }

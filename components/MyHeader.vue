@@ -1,6 +1,5 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
-	import IconLogo from '@/assets/Asset.svg'
 	import { Button } from '../components/ui/button'
 	import {
 		Sheet,
@@ -38,7 +37,7 @@ import type { LazyProseCodeInline } from '#build/components';
 </script>
 
 <template>
-	<header class="content-grid mx-auto z-10 text-white w-full">
+	<header class="content-grid z-10 text-white w-full">
 		<div class="infobar full-width content-grid place-content-end p-2">
 			<div class="text-base justify-self-end uppercase">
 				Phone: 1-800-321-5588
@@ -47,7 +46,7 @@ import type { LazyProseCodeInline } from '#build/components';
 		<div class="primary-header primary-header__layout w-full">
 			<div class="logo">
 				<NuxtLink to="/" class="font-bold flex items-center gap-4 flex-wrap">
-					<IconLogo class="text-7xl text-primary" />
+					<SvgoIconLogo class="text-7xl text-primary" />
 				</NuxtLink>
 			</div>
 

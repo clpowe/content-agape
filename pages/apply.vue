@@ -118,6 +118,9 @@
 
 <template>
 	<InnerHero title="Apply Now" />
+	<ClientOnly>
+		<ApplyForm />
+	</ClientOnly>
 	<!-- <ClientOnly>
 		<Vueform>
 			<TextElement name="hello_world" label="Hello" placeholder="World" />
