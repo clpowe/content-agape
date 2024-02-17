@@ -6,8 +6,7 @@
 </script>
 
 <template>
-	<ClientOnly>
-		<Sheet v-model:open="open">
+	<!-- <Sheet v-model:open="open">
 			<SheetTrigger>
 				<Button class="rounded-full text-white" variant="secondary">
 					contact
@@ -33,6 +32,5 @@
 				</div>
 				<div v-else>We will contact you soon</div>
 			</SheetContent>
-		</Sheet>
-	</ClientOnly>
+		</Sheet> -->
 </template>

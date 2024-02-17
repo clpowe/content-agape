@@ -1,5 +1,5 @@
 <script setup>
-	import { Button } from '../components/ui/button'
+	// import { Button } from '../components/ui/button'
 	const { data } = await useAsyncData('instructors', () =>
 		queryContent('instructors').sort({ title: -1 }).find()
 	)

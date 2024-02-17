@@ -1,17 +1,7 @@
-const animate = require('tailwindcss-animate')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ['class'],
 	safelist: ['dark'],
-	content: [
-		// ... your project files, eg.:
-		// './index.html',
-		// './src/**/*.{vue,js,ts,jsx,tsx}',
-		'./vueform.config.js',
-		'./node_modules/.pnpm/@vueform+vueform@*/node_modules/@vueform/vueform/themes/tailwind/**/*.vue',
-		'./node_modules/.pnpm/@vueform+vueform@*/node_modules/@vueform/vueform/themes/tailwind/**/*.js'
-	],
 
 	theme: {
 		container: {
@@ -58,6 +48,7 @@ module.exports = {
 				}
 			},
 			borderRadius: {
+				xl: 'calc(var(--radius) + 4px)',
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
@@ -87,6 +78,5 @@ module.exports = {
 				'collapsible-up': 'collapsible-up 0.2s ease-in-out'
 			}
 		}
-	},
-	plugins: [require('@vueform/vueform/tailwind'), animate]
+	}
 }

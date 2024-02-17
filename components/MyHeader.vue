@@ -1,15 +1,7 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
-	import { Button } from '../components/ui/button'
-	import {
-		Sheet,
-		SheetContent,
-		SheetClose,
-		SheetDescription,
-		SheetHeader,
-		SheetTitle,
-		SheetTrigger
-	} from '@/components/ui/sheet'
+	// import Sidebar from 'primevue/sidebar'
+	// import Button from 'primevue/button'
 
 	const navigation = ref([
 		{ name: 'home', link: '/' },
@@ -33,6 +25,7 @@ import type { LazyProseCodeInline } from '#build/components';
 	}
 
 	const open = ref(false)
+	const visible = ref(false)
 	onClickOutside(nav, () => menuRef.value?.close())
 </script>
 
@@ -63,35 +56,25 @@ import type { LazyProseCodeInline } from '#build/components';
 			</nav>
 
 			<div class="space-x-2 flex">
-				<MyContact />
-
-				<Sheet v-model:open="open">
-					<Button class="rounded-full text-primary md:hidden" as-child>
-						<SheetTrigger class="flex items-center gap-2 text-2xl">
-							menu
-						</SheetTrigger>
-					</Button>
-					<SheetContent
-						side="top"
-						class="bg-[var(--clr-black-500)] text-white text-xl p-8"
-					>
-						<SheetHeader>
-							<div flex justify-between>
-								<SheetTitle text-white>Menu</SheetTitle>
-								<SheetClose> close </SheetClose>
-							</div>
-						</SheetHeader>
-						<nav ref="nav" class="block text-white mt-">
-							<ul class="mobileMenu">
-								<li v-for="link in navigation">
-									<NuxtLink :to="link.link" class="text-3xl uppercase">
-										{{ link.name }}
-									</NuxtLink>
-								</li>
-							</ul>
-						</nav>
-					</SheetContent>
-				</Sheet>
+				<Sidebar
+					v-model:visible="visible"
+					position="bottom"
+					header="Sidebar"
+					class="w-30rem"
+				>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat.
+					</p>
+				</Sidebar>
+				<Button
+					severity="warning"
+					label="Submit"
+					@click="visible = true"
+					class="bg-red-800"
+				/>
 			</div>
 		</div>
 	</header>
