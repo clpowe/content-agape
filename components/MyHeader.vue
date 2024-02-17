@@ -43,12 +43,10 @@ import type { LazyProseCodeInline } from '#build/components';
 				</NuxtLink>
 			</div>
 
-			<nav class="hidden md:block">
-				<ul
-					class="deskMenu outline outline-primary outline-solid outline-1 rounded-full"
-				>
+			<nav class="hidden md:block relative">
+				<ul class="deskMenu">
 					<li v-for="link in navigation">
-						<NuxtLink :to="link.link" class="py-2 px-3 transition-all">
+						<NuxtLink :to="link.link" class="">
 							{{ link.name }}
 						</NuxtLink>
 					</li>
@@ -101,15 +99,41 @@ import type { LazyProseCodeInline } from '#build/components';
 	}
 
 	.deskMenu {
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: max(1vw, 1rem);
+		--radius: 999999px;
+		--border: 2px;
+		--height: 48px;
+		--speed: 0.25s;
+
+		height: var(--height);
+		display: grid;
+		grid-auto-flow: column;
+		border-radius: var(--radius);
+		grid-auto-columns: 1fr;
+		position: relative;
+		border: var(--border) solid hsl(0 0% 0%);
 	}
 
-	.deskMenu a {
+	.deskMenu::after {
+		pointer-events: none;
+		content: '';
+		width: calc(100% / 4);
+		height: 100%;
+		background: var(--clr-black-500);
+		position: absolute;
+		border-radius: calc(var(--radius) - var(--border));
+		mix-blend-mode: difference;
+		translate: calc(var(--active, 0) * 100%) 0;
+		transition: translate, outline-color;
+		transition-duration: var(--speed);
+		transition-timing-function: var(--ease, ease);
+		outline: 2px solid transparent;
+	}
+
+	.deskMenu li {
 		color: black;
+		display: grid;
+		padding-inline: 1rem;
+		place-content: center;
 		border-radius: calc(var(--radius) - 4px);
 		font-size: var(--fs-300);
 		text-transform: uppercase;
@@ -119,82 +143,29 @@ import type { LazyProseCodeInline } from '#build/components';
 		transition: all 0.3s var(--animation);
 	}
 
-	.deskMenu a:hover,
-	.deskMenu a:focus {
-		color: #fff;
-		background-color: var(--clr-black-500);
+	.deskMenu:has(li:nth-of-type(2) a.router-link-exact-active) {
+		--active: 1;
+	}
+	.deskMenu:has(li:nth-of-type(3) a.router-link-exact-active) {
+		--active: 2;
+	}
+	.deskMenu:has(li:nth-of-type(4) a.router-link-exact-active) {
+		--active: 3;
+	}
+
+	.deskMenu li:hover:has(a.router-link-exact-active) {
+		--highlight: 0.35;
+		background: hsla(0, 0%, 20%, 0);
+	}
+
+	.deskMenu li:hover {
+		color: var(--clr-black-500);
+		background-color: var(--clr-black-200);
 		border-radius: 9999px;
 	}
 
-	.deskMenu li {
-		display: contents;
-	}
-
-	.deskMenu a.router-link-active {
-		background-color: var(--clr-black-500);
+	.deskMenu a.router-link-exact-active {
 		color: #fff;
-		border-radius: 9999px;
-	}
-
-	dialog {
-		margin: 0;
-		position: absolute;
-		min-width: 100vw;
-		top: 0;
-		left: 0;
-		animation: slide-out 0.2s ease-out;
-	}
-	@starting-style {
-		dialog[open] {
-			margin: 0;
-			position: absolute;
-			min-width: 100vw;
-			top: 0;
-			left: 0;
-			transform: scaleY(0);
-		}
-	}
-	dialog[open] {
-		animation: slide-in 0.3s ease-out;
-	}
-
-	dialog[open]::backdrop {
-		animation: backdrop-fade-in 0.7s ease-out forwards;
-	}
-
-	/* Animation keyframes */
-
-	@keyframes slide-in {
-		0% {
-			transform: translateY(-100%);
-			display: none;
-		}
-
-		100% {
-			transform: translateY(0);
-			display: block;
-		}
-	}
-
-	@keyframes slide-out {
-		0% {
-			transform: translateY(0);
-			display: block;
-		}
-
-		100% {
-			transform: translateY(-100%);
-			display: none;
-		}
-	}
-
-	@keyframes backdrop-fade-in {
-		0% {
-			background-color: rgb(0 0 0 / 0);
-		}
-		100% {
-			background-color: rgb(0 0 0 / 0.65);
-		}
 	}
 
 	.mobileMenu {
