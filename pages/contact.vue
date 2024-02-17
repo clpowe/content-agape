@@ -6,26 +6,6 @@
 			process, please contact us at:
 		</p>
 		{{ errMsg }}
-		<!-- <FormKit type="form" @submit="handleClick">
-			<FormKit
-				type="text"
-				label="Full Name"
-				name="name"
-				validation="required"
-			></FormKit>
-			<FormKit
-				type="email"
-				label="Email"
-				name="email"
-				validation="required"
-			></FormKit>
-			<FormKit
-				type="textarea"
-				label="Message"
-				name="message"
-				validation="required"
-			></FormKit>
-		</FormKit> -->
 	</div>
 </template>
 

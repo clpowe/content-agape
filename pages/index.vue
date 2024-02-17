@@ -1,6 +1,4 @@
 <script setup>
-	import { AspectRatio } from '@/components/ui/aspect-ratio'
-
 	useSeoMeta({
 		title: 'Agape Christian Bar Prep',
 		description:
@@ -44,16 +42,16 @@
 			<p class="">Personalized service with proven results</p>
 			<div class="flex items-center gap-2"></div>
 		</div>
-		<AspectRatio
+		<NuxtImg
+			src="/homeHero.png"
+			class="object-cover w-full"
+			alt="Young man studying"
+		/>
+		<!-- <AspectRatio
 			:ratio="16 / 6"
 			class="bg-muted overflow-hidden rounded-[1rem]"
 		>
-			<NuxtImg
-				src="/homeHero.png"
-				class="object-cover w-full"
-				alt="Young man studying"
-			/>
-		</AspectRatio>
+		</AspectRatio> -->
 	</div>
 
 	<section
@@ -80,12 +78,12 @@
 					help you succeed.
 				</p>
 
-				<Button as-child>
+				<!-- <Button as-child>
 					<NuxtLink class="flex items-center">
 						Learn more
 						<div class="i-heroicons-chevron-right text-2xl"></div>
 					</NuxtLink>
-				</Button>
+				</Button> -->
 			</div>
 			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
 				<h3 class="editable text-2xl">Law School Exam Prep</h3>
@@ -95,12 +93,12 @@
 					full potential academically with our expert help.
 				</p>
 
-				<Button as-child>
+				<!-- <Button as-child>
 					<NuxtLink class="flex items-center">
 						Learn more
 						<div class="i-heroicons-chevron-right text-2xl"></div>
 					</NuxtLink>
-				</Button>
+				</Button> -->
 			</div>
 			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
 				<h3 class="editable text-2xl">Consultations</h3>
@@ -110,12 +108,12 @@
 					for success in law school and on the bar exam.
 				</p>
 
-				<Button as-child>
+				<!-- <Button as-child>
 					<NuxtLink class="flex items-center">
 						Learn more
 						<div class="i-heroicons-chevron-right text-2xl"></div>
 					</NuxtLink>
-				</Button>
+				</Button> -->
 			</div>
 		</article>
 	</section>

@@ -19,7 +19,6 @@ export default defineNuxtConfig({
 	content: {
 		documentDriven: false
 	},
-
 	modules: [
 		'nuxt-swiper',
 		'@nuxt/image',
@@ -27,13 +26,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/supabase',
 		'@vueuse/nuxt',
 		'nuxt-svgo',
-		'@vueform/nuxt',
-		'@nuxtjs/tailwindcss',
-		'shadcn-nuxt'
+		'nuxt-primevue',
+		'@nuxtjs/tailwindcss'
 	],
-	shadcn: {
-		componentDir: './components/ui'
-	},
+
 	svgo: {
 		autoImportPath: './assets/icons/'
 	},

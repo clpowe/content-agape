@@ -1,2 +1,2 @@
-nvm install v20.9.0
-nvm use v20.9.0
+nvm install ^19.0.0
+nvm use ^19.0.0
