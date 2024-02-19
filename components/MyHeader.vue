@@ -1,8 +1,5 @@
 import type { LazyProseCodeInline } from '#build/components';
 <script setup lang="ts">
-	// import Sidebar from 'primevue/sidebar'
-	// import Button from 'primevue/button'
-
 	const navigation = ref([
 		{ name: 'home', link: '/' },
 		{ name: 'about', link: '/about' },
@@ -71,7 +68,7 @@ import type { LazyProseCodeInline } from '#build/components';
 					severity="warning"
 					label="Submit"
 					@click="visible = true"
-					class="bg-red-800"
+					class="bg-red-800 text-center rounded-full text-xs uppercase leading-3 font-bold py-4 px-6 hover:bg-red-700"
 				/>
 			</div>
 		</div>
@@ -131,11 +128,9 @@ import type { LazyProseCodeInline } from '#build/components';
 
 	.deskMenu li {
 		color: black;
-		display: grid;
-		padding-inline: 1rem;
-		place-content: center;
+		text-align: center;
 		border-radius: calc(var(--radius) - 4px);
-		font-size: var(--fs-300);
+		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
 		font-weight: 500;
@@ -164,7 +159,11 @@ import type { LazyProseCodeInline } from '#build/components';
 		border-radius: 9999px;
 	}
 
-	.deskMenu a {
+	.deskMenu li > a {
+		padding-inline: 1rem;
+		display: grid;
+		align-items: center;
+		padding-block: 0.25rem;
 		height: 100%;
 		width: 100%;
 	}
