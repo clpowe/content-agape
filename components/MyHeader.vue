@@ -164,6 +164,11 @@ import type { LazyProseCodeInline } from '#build/components';
 		border-radius: 9999px;
 	}
 
+	.deskMenu a {
+		height: 100%;
+		width: 100%;
+	}
+
 	.deskMenu a.router-link-exact-active {
 		color: #fff;
 	}
