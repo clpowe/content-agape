@@ -16,17 +16,17 @@ collections_config:
     sort_options:
     singular_name:
     singular_key:
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
     add_options:
     create:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
     new_preview_url:
-    schemas: {}
+    schemas:
     schema_key:
   services:
     path: content/services
@@ -43,21 +43,16 @@ collections_config:
     sort_options:
     singular_name:
     singular_key:
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
     add_options:
     create:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
     new_preview_url:
-    schemas: {}
+    schemas:
     schema_key:
-_inputs: {}
-_select_data: {}
-_structures: {}
-_editables: {}
-data_config: {}
 timezone: Etc/UTC
