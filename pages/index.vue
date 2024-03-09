@@ -36,8 +36,8 @@
 </script>
 
 <template>
-	<div class="">
-		<div class="py-8 md:pt-20 md:pb-20">
+	<div class="editable">
+		<div class="py-8 md:pt-20 md:pb-20 editable">
 			<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
 			<p class="editable">Personalized service with proven results</p>
 			<div class="flex items-center gap-2"></div>
@@ -61,14 +61,14 @@
 			class="grid grid-cols-subgrid gap-4 flex-col md:flex-row col-span-full"
 		>
 			<h2 class="editable col-span-full">Our <span> service </span></h2>
-			<p class="max-w-[75ch] col-span-full">
+			<p class="max-w-[75ch] col-span-full editable">
 				Agape Christian Bar Prep offers many services to help students prepare
 				for success in law school and on the bar exam.  Our services are
 				customized to clearly identify and meet the individual needs of law
 				students and law school graduates.
 			</p>
 		</div>
-		<article class="grid grid-cols-subgrid col-span-full gap-4">
+		<article class="grid grid-cols-subgrid col-span-full gap-4 editable">
 			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
 				<h3 class="editable text-2xl">Bar Prep</h3>
 
@@ -85,7 +85,7 @@
 					</NuxtLink>
 				</Button> -->
 			</div>
-			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
+			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4 editable">
 				<h3 class="editable text-2xl">Law School Exam Prep</h3>
 
 				<p class="editable text-base">
