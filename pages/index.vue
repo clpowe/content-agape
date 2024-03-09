@@ -39,7 +39,7 @@
 	<div class="">
 		<div class="py-8 md:pt-20 md:pb-20">
 			<h1 class="editable homeh1">We help <span>you</span> pass the bar</h1>
-			<p class="">Personalized service with proven results</p>
+			<p class="editable">Personalized service with proven results</p>
 			<div class="flex items-center gap-2"></div>
 		</div>
 		<NuxtImg
