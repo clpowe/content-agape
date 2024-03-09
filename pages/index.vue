@@ -72,7 +72,7 @@
 			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
 				<h3 class="editable text-2xl">Bar Prep</h3>
 
-				<p class="editable text-base">
+				<p class=" text-base editable">
 					Preparing for the bar exam can be challenging, but Agape Christian Bar
 					Prep provides a supportive learning environment and strategic plan to
 					help you succeed.
