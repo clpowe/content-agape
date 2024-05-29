@@ -1,5 +1,6 @@
 paths:
   uploads: uploads
+  data: content
 collections_config:
   projects:
     path: content/teachers
@@ -55,6 +56,10 @@ collections_config:
     new_preview_url:
     schemas:
     schema_key:
+_enabled_editors:
+  - visual
+  - content
+  - data
 _editables:
   text:
     allow_custom_markup: true
