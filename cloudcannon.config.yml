@@ -56,6 +56,125 @@ collections_config:
     new_preview_url:
     schemas:
     schema_key:
+  teachers:
+    path: content/instructors
+    output: false
+    url:
+    filter:
+    parse_branch_index:
+    name:
+    description: ''
+    icon: '123'
+    documentation:
+    preview:
+    sort:
+    sort_options:
+    singular_name:
+    singular_key:
+    _editables:
+      content:
+        allow_custom_markup: false
+        remove_custom_markup: false
+        blockquote:
+        bold:
+        bulletedlist:
+        center:
+        code:
+        copyformatting:
+        embed:
+        expandable:
+        format:
+        height:
+        horizontalrule:
+        image:
+        image_size_attributes: true
+        indent:
+        italic:
+        justify:
+        left:
+        link:
+        mime_type:
+        numberedlist:
+        outdent:
+        paths:
+        redo:
+        removeformat:
+        resize_style: contain
+        right:
+        snippet:
+        strike:
+        styles:
+        subscript:
+        superscript:
+        table:
+        underline:
+        undo:
+        width:
+    _enabled_editors:
+      - visual
+    _inputs:
+    _select_data:
+    _structures:
+    add_options:
+    create:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url:
+    schemas:
+    schema_key:
+  pages:
+    path: content
+    output: false
+    url:
+    filter:
+    parse_branch_index:
+    name:
+    description: ''
+    icon: notes
+    documentation:
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      image:
+      metadata:
+      gallery:
+    sort:
+    sort_options:
+    singular_name:
+    singular_key:
+    _editables:
+      text:
+        allow_custom_markup: true
+        remove_custom_markup: false
+        bold:
+        copyformatting:
+        italic:
+        link:
+        paths:
+        redo:
+        removeformat:
+        strike:
+        subscript:
+        superscript:
+        underline:
+        undo:
+    _enabled_editors:
+      - visual
+      - content
+    _inputs:
+    _select_data:
+    _structures:
+    add_options:
+    create:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url:
+    schemas:
+    schema_key:
 _enabled_editors:
   - visual
   - content
