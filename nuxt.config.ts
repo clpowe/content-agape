@@ -19,8 +19,6 @@ export default defineNuxtConfig({
 	content: {
 		documentDriven: false
 	},
-	ssr: true,
-	target: 'static',
 	modules: [
 		'nuxt-swiper',
 		'@nuxt/image',
