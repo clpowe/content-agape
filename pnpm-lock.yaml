@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@cloudcannon/visual-editor-connector':
+    specifier: ^1.0.2
+    version: 1.0.2
   '@unocss/reset':
     specifier: ^0.58.3
     version: 0.58.5
@@ -389,6 +392,10 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+
+  /@cloudcannon/visual-editor-connector@1.0.2:
+    resolution: {integrity: sha512-5fYSLeAzkwETaOE+dBpOIc8P197D8vmOBVmwfwp1ZlWXLUhWEWSa3yxqC2lfkHd2mBEp5LunW1GG5SsvcBD+Lg==}
+    dev: false
 
   /@cloudflare/kv-asset-handler@0.3.1:
     resolution: {integrity: sha512-lKN2XCfKCmpKb86a1tl4GIwsJYDy9TGuwjhDELLmpKygQhw8X2xR4dusgpC5Tg7q1pB96Eb0rBo81kxSILQMwA==}
