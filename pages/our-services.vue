@@ -17,5 +17,6 @@
 </script>
 
 <template>
-	<InnerHero title="Our Services" />
+	<h1>Our Services</h1>
+	<!-- <InnerHero title="Our Services" /> -->
 </template>
