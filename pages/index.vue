@@ -33,13 +33,35 @@
 	)
 
 	const spaceBetween = 32
+
+	import {
+		onCloudCannonChanges,
+		stopCloudCannonChanges
+	} from '@cloudcannon/visual-editor-connector'
+
+	const { page } = useContent()
+
+	const pageData = ref(page.value)
+
+	onMounted(async () => {
+		onCloudCannonChanges((latestValue) => {
+			pageData.value = latestValue
+		})
+	})
+
+	onBeforeUnmount(async () => {
+		stopCloudCannonChanges()
+	})
 </script>
 
 <template>
 	<div class="">
-		<div class="py-8 md:pt-20 md:pb-20 ">
-			<h1 class="homeh1 editable">We help <span>you</span> pass the bar</h1>
-			<p class="editable">Personalized service with proven results</p>
+		<div class="py-8 md:pt-20 md:pb-20">
+			<h1 class="homeh1 editable"
+				>{{ pageData.MainTitle }}<span>{{ pageData.MainTitleColor }}</span>
+				{{ pageData.MainTitleSecond }}</h1
+			>
+			<p class="editable">{{ pageData.subtitle }}</p>
 			<div class="flex items-center gap-2"></div>
 		</div>
 		<NuxtImg
@@ -62,17 +84,14 @@
 		>
 			<h2 class="editable col-span-full">Our <span> service </span></h2>
 			<p class="max-w-[75ch] col-span-full editable">
-				Agape Christian Bar Prep offers many services to help students prepare
-				for success in law school and on the bar exam.  Our services are
-				customized to clearly identify and meet the individual needs of law
-				students and law school graduates.
+				{{ pageData.OurService }}
 			</p>
 		</div>
 		<article class="grid grid-cols-subgrid col-span-full gap-4 editable">
 			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4">
 				<h3 class="editable text-2xl">Bar Prep</h3>
 
-				<p class=" text-base editable">
+				<p class="text-base editable">
 					Preparing for the bar exam can be challenging, but Agape Christian Bar
 					Prep provides a supportive learning environment and strategic plan to
 					help you succeed.
@@ -85,7 +104,9 @@
 					</NuxtLink>
 				</Button> -->
 			</div>
-			<div class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4 editable">
+			<div
+				class="flex flex-col col-span-1 sm:col-span-2 lg:col-span-4 editable"
+			>
 				<h3 class="editable text-2xl">Law School Exam Prep</h3>
 
 				<p class="editable text-base">

@@ -1,5 +1,10 @@
 ---
 title: 'Agape Christian Bar Prep'
+MainTitle: "We help"
+MainTitleColor: "you"
+MainTitleSecond: "pass the bar"
+subtitle: "Personalized service with proven results"
+OurService: "Agape Christian Bar Prep offers many services to help students prepare for success in law school and on the bar exam.  Our services are customized to clearly identify and meet the individual needs of law students and law school graduates."
 ---
 
 # We help [you]{.text-red} pass the bar

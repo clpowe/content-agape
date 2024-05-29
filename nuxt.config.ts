@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 		}
 	},
 	content: {
-		documentDriven: false
+		documentDriven: true
 	},
 	modules: [
 		'nuxt-swiper',
